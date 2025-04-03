@@ -23,4 +23,4 @@ Kursusel on vaja minimaalselt ühte ESP32 arenduslauda ning arvutit. Kui on või
 
 Õpetus on valminud 2025. aastal Tallinna Ülikooli informaatika õppekava bakalaureuse lõputööna.
 
-[Esimene õpetus](./esp32-arduinoIDE-ettevalmistus/index.md)
+[Esimene õpetus](./esp32-arduinoIDE-ettevalmistus)
