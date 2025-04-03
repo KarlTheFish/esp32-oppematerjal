@@ -1,5 +1,8 @@
 ---
 title: Tutvustus
+layout: default
+nav_order: 1
+has_children: false
 ---
 # Tere tulemast ESP32 ja asjade interneti kursusele!
 
