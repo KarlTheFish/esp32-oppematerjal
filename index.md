@@ -1,3 +1,6 @@
+---
+title: Tutvustus
+---
 # Tere tulemast ESP32 ja asjade interneti kursusele!
 
 See kursus on loodud eestikeelse õppematerjalina asjade internetiga tutvumiseks. Kursus koosneb õpetustest, mille käigus ehitatakse ESP32 arenduslaudade abil targa linna mudel.
