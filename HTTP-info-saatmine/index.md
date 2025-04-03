@@ -5,11 +5,8 @@ nav_order:
 has_children: false
 ---
 
-![](./pildid/1.png)
+![](node-red-ettevalmistus/pildid/1.png)
 
 [Arduino kodulehelt](https://www.arduino.cc/en/software)
 
 [Esimene õpetus](./esp32-arduinoIDE-ettevalmistus)
-
-
-[Järgmine õpetus](../node-red-ettevalmistus/)

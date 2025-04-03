@@ -42,3 +42,5 @@ Rohkem informatsiooni Arduino ajaloo kohta saab lugeda [siit](https://spectrum.i
 
 **Kasutatud allikad:**  
 [https://www.arduino.cc/en/Guide/Introduction](https://www.arduino.cc/en/Guide/Introduction)
+
+[Järgmine õpetus](../node-red-ettevalmistus/)
