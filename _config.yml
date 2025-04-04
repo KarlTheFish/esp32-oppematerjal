@@ -16,3 +16,6 @@ callouts:
   important:
     title: Tähtis!
     color: red
+  todo:
+    title: TODO!!!
+    color: yellow
