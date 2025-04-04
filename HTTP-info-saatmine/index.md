@@ -1,7 +1,7 @@
 ---
 title: 2. HTTP info saatmine. Parkimismaja.
 layout: default
-nav_order: 4
+nav_order: 5
 has_children: false
 ---
 
@@ -40,7 +40,7 @@ Joonis maketeerimislaual olevast mudelist näeb välja selline:
 ![ESP32 joonis](./pildid/6.png)
 
 Ühendused on:  
-\ esp32 pin 4 \- nupp 1  
+- esp32 pin 4 \- nupp 1  
 -  nupp 1 \- 10k takisti 1  
 - 10k takisti 1 \- maandus  
 - nupp 1 \- esp32 3v3  
@@ -52,7 +52,7 @@ Joonis maketeerimislaual olevast mudelist näeb välja selline:
 Avame Arduino IDE ja avame uue sketši.
 
 Sarnaselt eelmisele õpetusele anname kõigepealt teada, et kasutame WiFi ning HTTPClient teeke ja deklareerime wifi nime ja parooli ja lingi, kuhu me HTTP päringut hakkame tegema.
-~~~Arduino
+```cpp
 #include <WiFi.h>
 #include <HTTPClient.h>
 
@@ -63,30 +63,30 @@ const char* password = "wifi-parool";
 
 
 String url = "http://1.2.3.4:1880/parkimine";
-~~~
+```
 
 Kuna me hakkame saatma infot mitme parkimiskoha oleku kohta, on otstarbekas deklareerida nuppude pin-id ühe massiivina. Deklareerime neli massiivi: nuppude pin-id, nuppude olekud(Nende järgi saab ESP32 aru, kas nuppu on vajutatud või ei), parkimiskohtade numbrid, ning boolean väärtuse, kas kohad on vabad või mitte. Iga massiivi indeks vastab sama koha infole teises massiivis, ehk 4. pin-iga on ühendatud parkimiskoht number 1, selle nupu olek on praegu 0, ning see koht on esialgu vaba.
-~~~Arduino
+```cpp
 int Btns[] = {4, 5}; //Nuppude pin-id
 int BtnStates[] = {0, 0}; //Nuppude olekud
 int kohad[] = {1, 2}; //Kohtade numbrid
 bool vabad[] = {true, true}; //Iga koha olek, kas on vaba
-~~~
+```
 
 Kuna Arduino IDE programmeerimine on sarnane C ja C++ keeltega, peame me tegema ka eraldi muutuja massiivide suuruse jaoks. Kuna kõik 4 massiivi on ühesuurused, läheb meil selle jaoks vaja ainult ühte muutujat.
-~~~Arduino
+```cpp
 int size = sizeof(vabad) / sizeof(vabad[0]);
-~~~
+```
 
 Teeme ka esialgu tühja massiivi, kus hakkame hoidma viimast massiivi “vabad” olekut. Massiiv on sama suur, nagu teised.
-~~~Arduino
+```cpp
 bool vabadEelmine[size];
-~~~
+```
 
 Programm hakkab töötama nii: for-tsükliga kontrollitakse, kas mõnda nuppu on vajutatud, ning kui on, muudetakse vastavalt nupule tõeväärtust vabade kohtade massivis. Kui for-tsükkel on tehtud, vaadatakse, kas praegune vabade kohtade massiiv erineb peale viimast muutust tehtud vabade kohtade massiivist, ning kui erineb, saadetakse uue massiivi kohta informatsioon Node-RED-ile.
 
 Loome 2 uut funktsiooni. Esimene funktsioon on massiivide kopeerimiseks ning teine massiivide võrdlemiseks.
-~~~Arduino
+```cpp
 //funktsioon massiivide kopeerimiseks
 void copyArray(bool src[], bool dst[], int size) {
    for (int i = 0; i < size; i++) {
@@ -105,7 +105,7 @@ bool eriMassiivid(bool arr1[], bool arr2[], int size){
  return false; //Kui tõeväärtust ei ole tagastatud, tagastab false-väärtuse
 }
 
-~~~
+```
 
 Loome funktsiooni, millega hakkame saatma HTTP päringut. Meie päring saab olema JSON formaadis ning näeb välja selline:  
 \[{“koht”:”1”,”vaba”:”jah”},{“koht”:”2”,”vaba”:”jah”}\]  
@@ -115,7 +115,7 @@ Tegelikult oleks meil lihtsam kasutada Arduino JSON teeki, selle asemel, et JSON
 {: .info}
 
 Alustame HTTP päringut ning lisame päise, mis ütleb, et tegu on JSON-iga.
-~~~Arduino
+```cpp
 void httpPost(){
  Serial.println("Starting HTTP request...");
    if(WiFi.status() == WL_CONNECTED){
@@ -131,10 +131,10 @@ void httpPost(){
 
 }
 
-~~~
+```
 
  Hakkame päringut ehitama. Kasutame selleks *for*\-tsüklit, mis lisab päringusse iga massiivis oleva koha numbri ning talle vastava massiivis oleku. Kui tegu ei ole viimase elemendiga massiivis, lisame iga koha järel koma. Kuna me soovime päringus saata informatsiooni mitme koha kohta, lisame päringu algusesse ja lõppu nurksulud.
- ~~~Arduino
+ ```cpp
     String postData = "[";
 
 
@@ -152,13 +152,13 @@ void httpPost(){
      }
    }
    postData += "]";
-   ~~~
+   ```
 
 Et päringu sõnesse lisada jutumärke, kasutame \ märki enne jutumärki, mida soovime lisada.
 {: .info}
 
 Kui päring on valmis, prindime serial monitori päringu sõne ja kasutame **http.POST()**, et päring saata. Kui päring on saadetud, lõpetame HTTP ühenduse. Lisame funktsioonile ka poole sekundilise delay, et vältida mitu korda sama päringu saatmist.
-~~~Arduino
+```cpp
    Serial.println(postData);
    int httpResponseCode = http.POST(postData);
 
@@ -171,10 +171,10 @@ Kui päring on valmis, prindime serial monitori päringu sõne ja kasutame **htt
 
 
    delay(500);
-~~~
+```
 
 Lõpuks näeb meie httpPost funktsioon välja selline:
-~~~Arduino
+```cpp
 void httpPost(){
  Serial.println("Starting HTTP request...");
    if(WiFi.status() == WL_CONNECTED){
@@ -220,10 +220,10 @@ void httpPost(){
  }
 }
 
-~~~
+```
 
 Liigume setup() funktsiooni juurde. Paneme kõigepealt käima serial monitori ning wifi.
-~~~Arduino
+```cpp
 void setup() {
  Serial.begin(115200);
  WiFi.begin(ssid, password);
@@ -233,34 +233,34 @@ void setup() {
 
 }
 
-~~~
+```
 
 Eelmises õpetuses ütlesime ESP32-le, et meie deklareeritud pin-id on väljundid. Kuna seekord loeb ESP32 meie varem deklareeritud pin-idest infot, kasutame for-tsüklit, et öelda, et tegu on sisenditega.
-~~~Arduino
+```cpp
  for(int i = 0; i < size; i++){
    pinMode(Btns[i], INPUT);
  }
 
-~~~
+```
 
 Kasutame enda tehtud funktsiooni, et panna vabadEelmine massiivi väärtuseks praegune vabade kohtade massiiv.
-~~~Arduino
+```cpp
  copyArray(vabad, vabadEelmine, sizeof(vabad) / sizeof(vabad[0]));
 
-~~~
+```
 
 Viimasena lisame setup funktsiooni Wifi ühenduse loomise ning serial monitori selle kohta informatsiooni printimise.
-~~~Arduino
+```cpp
  while(WiFi.status() != WL_CONNECTED){
    delay(500);
    Serial.print(".");
  }
  Serial.println();
  Serial.println("Connected!");
-~~~
+```
 
 Kogu setup funktsioon näeb välja selline:
-~~~Arduino
+```cpp
 void setup() {
  //Paneme käima serial monitori ja wifi
  Serial.begin(115200);
@@ -289,10 +289,10 @@ void setup() {
 
 }
 
-~~~
+```
 
 Lõpuks koostame loop funktsiooni. Kõigepealt loeme for-tsükliga sisendit kõikidest deklareeritud nuppudest.
-~~~Arduino
+```cpp
 void loop() {
  for(int i = 0; i < size; i++){
    BtnStates[i] = digitalRead(Btns[i]);
@@ -300,27 +300,27 @@ void loop() {
 
 }
 
-~~~
+```
 
 Lisame *for* tsüklisse tingimuslause: kui hetkel loetava pin-i sisend on HIGH, muudame vastavat *boolean* väärtust teises massiivis. (Meeldetuletuseks \- LED tulega väljund pin-il tähendas HIGH, et paneme tule põlema, ning LOW, et tuli kustus. Siin tähendab HIGH, et nuppu vajutatakse, ning LOW, et ei vajutata.)
-~~~Arduino
+```cpp
    if(BtnStates[i] == HIGH){
      vabad[i] = !vabad[i];
    }
 
-~~~
+```
 
 Kui *for*\-tsükkel on tehtud, kontrollime, kas meie praegune parkimiskohtade oleku massiiv on sama, mis enne viimast muudetud. Kui massiivid on erinevad, alustame HTTP päringut ja paneme praeguse massiivi väärtuse viimati salvestatud väärtuseks.
-~~~Arduino
+```cpp
  if (arraysAreDifferent(vabadEelmine, vabad, sizeof(vabad) / sizeof(vabad[0]))){
    httpPost();
    copyArray(vabad, vabadEelmine, sizeof(vabad) / sizeof(vabad[0]));
  }
 
-~~~
+```
 
 Valmis *loop* funktsioon:
-~~~Arduino
+```cpp
 void loop() {
  //Vaatame tsükliga, kas mõni meie deklareeritud nuppudest on vajutatud
  for(int i = 0; i < size; i++){
@@ -339,10 +339,10 @@ void loop() {
  }
 }
 
-~~~
+```
 
 Terve programm:
-~~~Arduino
+```cpp
 #include <WiFi.h>
 #include <HTTPClient.h>
 
@@ -484,7 +484,7 @@ void loop() {
  }
 }
 
-~~~
+```
 
 Laeme programmi ESP32-le, avame Node-RED dashboard-i ning proovime nuppe vajutada. Kui kõik on õigesti tehtud, peaksid nüüd iga nupuvajutusega tabelis olevad värvid muutuma.
 

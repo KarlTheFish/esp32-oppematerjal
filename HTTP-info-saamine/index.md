@@ -1,7 +1,7 @@
 ---
 title: 1. HTTP info saamine. Valgusfoor
 layout: default
-nav_order: 
+nav_order: 4
 has_children: false
 ---
 
@@ -29,7 +29,7 @@ Samad ühendused on kollase ja rohelise LED-iga, kuid kollase LED-i ees olev tak
 Avame Arduino IDE ning valime enda arenduslaua(Õige arenduslaua valimisest oli juttu 0.1. peatükis). Alguses on meil kohe ees selline kood:
 ```cpp
 void setup() {
- // put your setup code here, to run once:
+// put your setup code here, to run once:
 
   
 
@@ -38,7 +38,7 @@ void setup() {
   
 
 void loop() {
- // put your main code here, to run repeatedly:
+// put your main code here, to run repeatedly:
 
   
 
@@ -55,22 +55,20 @@ int rohelinePin = 7;
 ```
 
 Setup funktsioonis ütleme ESP32-le, et kasutame deklareeritud LED pin-e väljunditena. Lisame setup funktsiooni read:
-~~~Arduino
+```cpp
  pinMode(punanePin, OUTPUT);
  pinMode(kollanePin, OUTPUT);
  pinMode(rohelinePin, OUTPUT);
-~~~
-
+```
 Teeme uue funktsiooni nimega **punane**. Funktsiooni sees kirjutame punase LED pin-ile väärtuse HIGH, et see põlema panna. Lisame **delay,** et programm ootaks 3000 millisekundit ehk 3 sekundit, enne kui edasi liigub.
-~~~Arduino
+```cpp
 void punane() {
  digitalWrite(punanePin, HIGH);
  delay(3000);
 }
-~~~
-
+```
 Et punane tuli enne kustumist vilguks, lisame ka for-tsükli, mille sees kirjutame pin-ile HIGH väärtuse, lisame 1000-millisekundilise delay, kirjutame pin-ile LOW väärtuse, ning lisame veel ühe 1000-millisekundilise delay.
-~~~Arduino
+```cpp
 void punane() {
  digitalWrite(punanePin, HIGH);
  delay(3000);
@@ -81,14 +79,13 @@ void punane() {
    delay(1000);
  }
 }
-
-~~~
+```
 
 Teeme samasuguse funktsiooni, kus sama asi toimub rohelise pin-iga.
-~~~Arduino
+```cpp
 void roheline() {
-   digitalWrite(rohelinePin, HIGH);
- delay(3000);
+digitalWrite(rohelinePin, HIGH);
+delay(3000);
  for(int i = 0; i < 2; i++){
    digitalWrite(rohelinePin, HIGH);
    delay(1000);
@@ -97,10 +94,10 @@ void roheline() {
  }
 }
 
-~~~
+```
 
 Kollase pin-i jaoks teeme funktsiooni, mille sees on ainult üks while-tsükkel, kus kolm korda vilgutatakse kollast tuld.
-~~~Arduino
+```cpp
 void kollane() {
  for(int i = 0; i < 3; i++){
    digitalWrite(kollanePin, HIGH);
@@ -110,10 +107,10 @@ void kollane() {
  }
 }
 
-~~~
+```
 
 Lõpuks kutsume **loop** funktsioonis välja punase, kollase, rohelise, ning siis jälle kollase funktsiooni.
-~~~Arduino
+```cpp
 void loop() {
  // loop funktsioon käivitub korduvalt kogu programmi töö ajal
  punane();
@@ -122,10 +119,10 @@ void loop() {
  kollane();
 }
 
-~~~
+```
 
 Lõpuks näeb meie kood välja selline:
-~~~Arduino
+```cpp
 //Defineerime pin-id, millega eri värvi LED tuled on ühendatud
 int punanePin = 5;
 int kollanePin = 6;
@@ -185,7 +182,7 @@ void kollane() {
  }
 }
 
-~~~
+```
 
 **Miks me kasutame delay() funktsiooni?** Kui me delay funktsiooni ei kasutaks, liiguks programm edasi nii kiiresti, et me ei näeks, kui LED tuli hetkeks põlema läheb või kustub.
 {: .info}
@@ -199,29 +196,29 @@ Kui sinu ESP32-l on kaks kohta, kuhu USB kaabel ühendada, töötab tavaliselt A
 Valgusfoor küll töötab, aga kui me tahaksime muuta, kui kaua üks tsükkel kestab, peaksime me uuesti ESP32 arvutiga ühendama ning koodi manuaalselt muutma. See ei oleks eriti praktiline, kuna erinevatel aegadel võib olla kõige parem kasutada eri pikkusega tsüklit \- näiteks kui autosid kuigi palju ei sõida, võib tsükkel olla lühem, aga kui liiklust on palju, võiks tsükkel kesta kauem, et võimalikult palju autosi saaksid ühe tsükliga ristmikust üle sõita. Mugav oleks, kui me saaksime tsükli pikkust reguleerida läbi veebi.
 
 Et veebiga suhelda, läheb meil vaja väliseid teeke. Deklareerime programmi alguses kaks välist teeki: WiFi.h ning HTTPClient.h
-~~~Arduino
+```cpp
 #include <WiFi.h>
 #include <HTTPClient.h>
-~~~
+```
 
 Seejärel defineerime wifi nime ning parooli, millega ESP32 peab ühenduma(Arvuti, kus töötab Node-RED ja ESP32 peavad olema samas võrgus\!). Lisaks defineerime URL-i, kuhu ESP32 päringut hakkab tegema. Aadressiks saab arvuti IP pordiga 1880, ning sellele lisame tee(*path*), kust ESP32 hakkab infot saama.
-~~~Arduino
+```cpp
 const char* ssid = "wifi-nimi"; //esp32 toetab 2.4GhZ wifit!
 const char* password = "wifi–parool";
 
 
 String url = "http://1.2.3.4:1880/valgus";
-~~~
+```
 
 (Enda arvuti IP aadressi saad teada Linux-is *hostname \-I* ning Windows-is *ipconfig* käsuga käsureal. ESP32-le vajalik minev IP aadress **ei alga** numbritega 172\!)
 
 Deklareerima ka uue täisarvu tüüpi muutuja **aeg**, milles hakkame hoidma HTTP päringust saadud väärtust, kui kaua valgusfoori valgus põleb. Paneme tema vaikimisi väärtuseks 1\.
-~~~Arduino
+```cpp
 int aeg = 1;
-~~~
+```
 
 Asendame **delay(3000)** **punane** ning **roheline** funktsioonides reaga **delay(aeg)**.
-~~~Arduino
+```cpp
 void punane() {
  digitalWrite(punanePin, HIGH); //Kirjutame pin-ile HIGH väärtuse - tuli läheb põlema
  delay(aeg);
@@ -233,26 +230,26 @@ void punane() {
  }
 }
 
-~~~
+```
 
 Arduino IDE-s on mugav jälgida programmi tööd **Serial monitor** abil. Lisame **setup** funktsiooni kaks rida:
-~~~Arduino
+```cpp
  Serial.begin(115200); //Alustame serial ühendust 115200 baudi peal
  WiFi.begin(ssid, password); //Alustame wifi ühendust eespool defineeritud nime ning parooliga
-~~~
+```
 
 Kuvame serial monitoris teksti “Connecting…” ning lisame while-tsükli, mis laadimise näitamiseks kuvab punkte iga 500 millisekundi tagant senikaua, kuni ESP32 ei ole wifi-ga ühendust saanud.
-~~~Arduino
+```cpp
  Serial.print("Connecting...");
   while(WiFi.status() != WL_CONNECTED){
    delay(500);
    Serial.print(".");
  }
 
-~~~
+```
 
 Lõpuks näeb meie setup funktsioon välja selline:
-~~~Arduino
+```cpp
 void setup() {
  // setup funktsioon käivitub iga kord, kui esp32 lülitatakse sisse
 
@@ -274,40 +271,40 @@ void setup() {
  }
 }
 
-~~~
+```
 
 Et hoida enda kood lihtsana, teeme uue funktsiooni **httpParing()**. Seda funktsiooni hakkame kasutama, et saada infot, kui kaua valgusfoori valgus peaks põlema.
-~~~Arduino
+```cpp
 void httpParing(){
 
 }
-~~~
+```
 
 Lisame funktsiooni tingimuslause - HTTP päringut hakkame tegema ainult siis, kui wifi ühendus on olemas.
-~~~Arduino
+```cpp
 void httpParing(){
    if(WiFi.status() == WL_CONNECTED){ //Kontrollime, et wifi ühendus on olemas
  }
 }
 
-~~~
+```
 
 Kirjutame tingimuslause sisse 3 rida:
-~~~Arduino
+```cpp
 WiFiClient client;
 HTTPClient http;
 
 
 http.begin(client, url); //alustame http päringut, kasutades WiFiClient-i ning varem defineeritud URL-i
-~~~
+```
 
 Lisaks defineerime täisarvulise muutuja, mille väärtuseks saab GET päringu vastusena saadud HTTP kood. Erinevate HTTP koodide kohta saab lugeda [siit](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
-~~~Arduino
+```cpp
 int responseCode = http.GET(); //defineerime muutuja HTTP päringu vastuse koodi hoidmiseks
-~~~
+```
 
 Lisame uue tingimuslause: kui HTTP päringust saadud kood on suurem, kui 0, prindime serial monitori vastuse koodi ja jätkame päringu vastusest info saamisega. Kui ei ole, prindime serial monitoris veakoodi.
-~~~Arduino
+```cpp
 if(responseCode > 0){
     Serial.print("HTTP Response code: ");
     Serial.println(responseCode);
@@ -319,24 +316,24 @@ else {
     Serial.println(responseCode);
 }
 
-~~~
+```
 
 Kui HTTP päringu vastuse kood on 200, saame muutuja “aeg” väärtuseks panna HTTP vastuse väärtuse täismuutujaks teisendatuna. Kuna me tahame kestust anda sekundites, kuid Arduino delay() funktsioon töötab millisekunditega, korrutame saadud vastuse tuhandega.
-~~~Arduino
+```cpp
  if(responseCode == 200){ //Jätkame kui kood on 200 - OK
    //Saame HTTP vastuse stringina, cast-ime selle täisarvuliseks muutujaks, ning korrutame selle 1000-ga, et saada väärtus millisekundites
    aeg = http.getString().toInt() * 1000;
    Serial.println(aeg);
  }
-~~~
+```
 
 httpParing funktsiooni lõpus lõpetame http ühenduse.
-~~~Arduino
+```cpp
   http.end();
-~~~
+```
 
 Lõpuks võiks httpParing funktsioon välja näha selline:
-~~~Arduino
+```cpp
 void httpParing(){
    if(WiFi.status() == WL_CONNECTED){ //Kontrollime, et wifi ühendus on olemas
    WiFiClient client;
@@ -368,10 +365,10 @@ void httpParing(){
  }
 }
 
-~~~
+```
 
 Kutsume httpParing funktsiooni välja loop funktsioonis, et enne igat tsüklit ESP32 teeks HTTP päringu.
-~~~Arduino
+```cpp
 void loop() {
  // loop funktsioon käivitub korduvalt kogu programmi töö ajal
  httpParing();
@@ -381,10 +378,10 @@ void loop() {
  kollane();
 }
 
-~~~
+```
 
 Lõpuks näeb meie programm välja selline:
-~~~Arduino
+```cpp
 #include <WiFi.h>
 #include <HTTPClient.h>
 
@@ -503,7 +500,7 @@ void httpParing(){
  }
 }
 
-~~~
+```
 
 ESP32 poolt on nüüd kõik vajalik tehtud, aga kui me programmi tööle paneks, ei saaks me kätte mingit infot. Et panna enda arvuti vajalikku infot saatma, kasutame Node-RED-i.
 
