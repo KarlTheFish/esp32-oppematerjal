@@ -1,7 +1,7 @@
 ---
 title: 4. MQTT protokoll. Teemade kohta info avaldamine. Õhuandur
 layout: default
-nav_order: 6
+nav_order: 7
 has_children: false
 ---
 
@@ -94,7 +94,7 @@ void DHTlugemine(){
 }
 ```
 
-setup funktsioonis paneme käima serial monitori, wifi, ning dht klassid. Anname MQTT klassile info MQTT serveri ning pordi kohta(MQTT ühendus toimub vaikimisi 1883 pordi peal).
+Setup funktsioonis paneme käima serial monitori, wifi, ning dht klassid. Anname MQTT klassile info MQTT serveri ning pordi kohta(MQTT ühendus toimub vaikimisi 1883 pordi peal).
 
 ```cpp
 void setup() {
@@ -273,4 +273,4 @@ Paneme enda arvutis käima Mosquitto, laeme tehtud programmi ESP32-le, ning vaju
  - Proovi panna veel mõned ESP32-d temperatuuri kohta infot saatma. Mis juhtub graafikuga? Tee iga ESP32 kohta eraldi graafik.  
  - Arvuta ESP32-s viimase 50 mõõdetud temperatuuri ja õhuniiskuse keskmine ning kasuta Node-RED dashboard 2 *text* sõlme, et neid *dashboard*\-il kuvada. (Vihje \- üks esp32 võib avaldata infot mitme teema kohta\!).
 
-[Järgmine õpetus](../node-red-ettevalmistus/)
+[Järgmine õpetus](../MQTT-turvalisus/)
