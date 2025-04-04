@@ -593,5 +593,5 @@ Kuidas teha nii, et rohelise ja punase tule kestust saaks eraldi reguleerida?
 [https://flowfuse.com/node-red/core-nodes/change/](https://flowfuse.com/node-red/core-nodes/change/)
 
 
-[Järgmine õpetus](./http-info-saatmine)
+[Järgmine õpetus](../http-info-saatmine)
 
