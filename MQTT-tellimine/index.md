@@ -396,13 +396,13 @@ Vajuta Node-RED-is *Deploy* nuppu, mine Node-RED dashboardile, ja pane ESP32 tö
 
 **Kasutatud allikad:**  
 
-[https://forum.arduino.cc/t/mqtt-loop-in-the-loop-section-why/1015200](https://forum.arduino.cc/t/mqtt-loop-in-the-loop-section-why/1015200)
-[https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/)  
-[https://www.oasis-open.org/standards/](https://www.oasis-open.org/standards/)[http://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html](http://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html) 
-[https://scispace.com/pdf/the-use-of-mqtt-in-m2m-and-iot-systems-a-survey-1u39tkgj3g.pdf](https://scispace.com/pdf/the-use-of-mqtt-in-m2m-and-iot-systems-a-survey-1u39tkgj3g.pdf)
-[https://mqtt.org/](https://mqtt.org/)
-[https://randomnerdtutorials.com/esp8266-and-node-red-with-mqtt/](https://randomnerdtutorials.com/esp8266-and-node-red-with-mqtt/)  
-[https://pubsubclient.knolleary.net/api](https://pubsubclient.knolleary.net/api)
+- [https://forum.arduino.cc/t/mqtt-loop-in-the-loop-section-why/1015200](https://forum.arduino.cc/t/mqtt-loop-in-the-loop-section-why/1015200)
+- [https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/)  
+- [https://www.oasis-open.org/standards/](https://www.oasis-open.org/standards/)[http://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html](http://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html) 
+- [https://scispace.com/pdf/the-use-of-mqtt-in-m2m-and-iot-systems-a-survey-1u39tkgj3g.pdf](https://scispace.com/pdf/the-use-of-mqtt-in-m2m-and-iot-systems-a-survey-1u39tkgj3g.pdf)
+- [https://mqtt.org/](https://mqtt.org/)
+- [https://randomnerdtutorials.com/esp8266-and-node-red-with-mqtt/](https://randomnerdtutorials.com/esp8266-and-node-red-with-mqtt/)  
+- [https://pubsubclient.knolleary.net/api](https://pubsubclient.knolleary.net/api)
 
 
 [Järgmine õpetus](../MQTT-avaldamine/)

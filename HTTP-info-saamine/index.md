@@ -587,10 +587,10 @@ Kui valgusfoor töötab, võib soovi korral selle kokku joota ning nt. papist va
 Kuidas teha nii, et rohelise ja punase tule kestust saaks eraldi reguleerida?
 
 **Kasutatud allikad:**  
-[https://flowfuse.com/node-red/getting-started/node-red-messages/](https://flowfuse.com/node-red/getting-started/node-red-messages/)  
-[https://www.digikey.com/en/maker/tutorials/2022/how-to-use-variables-in-node-red](https://www.digikey.com/en/maker/tutorials/2022/how-to-use-variables-in-node-red)  
-[https://docs.arduino.cc/built-in-examples/strings/StringToInt/](https://docs.arduino.cc/built-in-examples/strings/StringToInt/)   
-[https://flowfuse.com/node-red/core-nodes/change/](https://flowfuse.com/node-red/core-nodes/change/)
+- [https://flowfuse.com/node-red/getting-started/node-red-messages/](https://flowfuse.com/node-red/getting-started/node-red-messages/)  
+- [https://www.digikey.com/en/maker/tutorials/2022/how-to-use-variables-in-node-red](https://www.digikey.com/en/maker/tutorials/2022/how-to-use-variables-in-node-red)  
+- [https://docs.arduino.cc/built-in-examples/strings/StringToInt/](https://docs.arduino.cc/built-in-examples/strings/StringToInt/)   
+- [https://flowfuse.com/node-red/core-nodes/change/](https://flowfuse.com/node-red/core-nodes/change/)
 
 
 [Järgmine õpetus](../http-info-saatmine)

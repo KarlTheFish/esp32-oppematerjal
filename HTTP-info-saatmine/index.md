@@ -501,9 +501,9 @@ Laeme programmi ESP32-le, avame Node-RED dashboard-i ning proovime nuppe vajutad
 
 **Kasutatud allikad:**
 
-[https://randomnerdtutorials.com/esp32-http-get-post-arduino/](https://randomnerdtutorials.com/esp32-http-get-post-arduino/)   
-[https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST)   
-[https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/](https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/)   
-[https://docs.arduino.cc/language-reference/en/variables/data-types/array/](https://docs.arduino.cc/language-reference/en/variables/data-types/array/)
+- [https://randomnerdtutorials.com/esp32-http-get-post-arduino/](https://randomnerdtutorials.com/esp32-http-get-post-arduino/)   
+- [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST)   
+- [https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/](https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/)   
+- [https://docs.arduino.cc/language-reference/en/variables/data-types/array/](https://docs.arduino.cc/language-reference/en/variables/data-types/array/)
 
 [Järgmine õpetus](../MQTT-tellimine/)

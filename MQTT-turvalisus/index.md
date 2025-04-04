@@ -9,14 +9,17 @@ Siiamaani MQTT protokolliga asjad küll töötavad, kuid need on turvamata. Iga�
 
 Õnneks on MQTT protokolliga võimalik infot saata ka turvatud moel. Kasutame seda, et luua kutsungisüsteem. Loome Mosquitto vahendajaga MQTT kasutaja ning ACL(Access Control List), millega piirame teemadele ligipääsu. Teeme häirekutsungisüsteemi, mis edastab ESP32-le signaali, mille peale LED tuli hakkab vilkuma. Selline süsteem võiks olla kasulik näiteks selleks, et teavitada turvatöötajaid, et koguneda kuskile kindlasse kohta. (Tänapäeval saab muidugi selleks kasutada telefone ning muid suhtluskanaleid, aga mõnes olukorras võivad ka primitiivsed meetodid, nagu meie oma, kasulikud olla.)
 
-Muudame kõigepealt oma Mosquitto konfiguratsioonifaili. Linux operatsioonisüsteemides leiad selle `/etc/mosquitto/mosquitto.conf` , Windows operatsioonisüsteemis samas kaustas, kus on Mosquitto.exe fail, nt `C:\\Program Files\\mosquitto\\mosquitto.conf`  
+Muudame kõigepealt oma Mosquitto konfiguratsioonifaili. Linux operatsioonisüsteemides leiad selle `/etc/mosquitto/mosquitto.conf` , Windows operatsioonisüsteemis samas kaustas, kus on Mosquitto.exe fail, nt `C:\\Program Files\\mosquitto\\mosquitto.conf` 
+
 Lisame read:
 
 Linux kasutajad:
+
 `acl\_file /etc/mosquitto/acl-kutsung`  
 `password\_file /etc/mosquitto/passwd`
 
 Windows kasutajad:
+
 `acl_file C:\Program Files\mosquitto\acl-kutsung.txt`
 `password_file C:\Program Files\mosquitto\passwd.txt`
 
@@ -306,7 +309,7 @@ void loop() {
 }
 ```
 
-Mosquitto ei lase ühenduda kahel sama **kliendi nimega**(Siin õpetuses ESP32-kutsung-1), kuid sama **kasutajanimega** ühendumine on lubatud\!
+Mosquitto ei lase ühenduda kahel kliendil sama **kliendi nimega**(Siin õpetuses ESP32-kutsung-1), kuid sama **kasutajanimega** ühendumine on lubatud\!
 {: .important}
 
 Liigume node-RED juurde. Leia node-RED vasakult menüüst sõlm nimega *button* ja tiri see keskele. Paneme nupu nimeks kutsung ja sildiks “Häire”. *Payload* väärtuseks paneme “alert”.
@@ -351,9 +354,8 @@ Proovi ka varem tehtud MQTT asjad teha turvaliseks.
 
 **Kasutatud allikad:**
 
-[http://www.steves-internet-guide.com/topic-restriction-mosquitto-configuration/](http://www.steves-internet-guide.com/topic-restriction-mosquitto-configuration/)
+- [http://www.steves-internet-guide.com/topic-restriction-mosquitto-configuration/](http://www.steves-internet-guide.com/topic-restriction-mosquitto-configuration/)
+- [https://shop.theengs.io/blogs/news/installing-mosquitto-on-windows-and-make-it-accessible-from-your-local-network](https://shop.theengs.io/blogs/news/installing-mosquitto-on-windows-and-make-it-accessible-from-your-local-network)
 
-[https://shop.theengs.io/blogs/news/installing-mosquitto-on-windows-and-make-it-accessible-from-your-local-network](https://shop.theengs.io/blogs/news/installing-mosquitto-on-windows-and-make-it-accessible-from-your-local-network)
 
-
-[Järgmine õpetus](../node-red-ettevalmistus/)
+[Järgmine õpetus](../HTTP-server/)
