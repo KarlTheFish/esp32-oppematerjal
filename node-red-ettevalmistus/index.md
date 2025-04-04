@@ -25,12 +25,11 @@ Paigaldame *Node-RED*\-ile ka *Dashboard 2.0* laienduse, et enda targa linna kon
 
 Kui *Dashboards 2.0* laiendus on installitud, oleme valmis enda esimeseks ESP32 asjade interneti projektiks!
 
-########################################
 **NB: Node-RED on vaja Dockeris käima panna iga kord, kui arvuti uuesti sisse lülitad. Selleks jooksuta Docker käsureal:**  
 docker start TarkLinn  
 **või Linux terminalis:**  
 sudo docker start TarkLinn
-########################################
+{: .important}
 
 **Kasutatud allikad:**  
 [https://nodered.org/about/](https://nodered.org/about/)

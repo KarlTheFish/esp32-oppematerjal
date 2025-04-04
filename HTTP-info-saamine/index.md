@@ -5,7 +5,8 @@ nav_order:
 has_children: false
 ---
 
-\[TODO: infot HTTP protokolli kohta?\]
+TODO: Infot HTTP protokolli kohta
+{: .todo}
 
 Linnades sõidavad tavaliselt autod, ning ohutuse mõttes võiksime esimese asjana enda tarka linna lisada valgusfoorid. 
 

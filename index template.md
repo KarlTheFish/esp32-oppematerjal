@@ -11,5 +11,10 @@ has_children: false
 
 [Esimene õpetus](./esp32-arduinoIDE-ettevalmistus)
 
+{: .info}
+
+{: .important}
+
+{: .todo}
 
 [Järgmine õpetus](../node-red-ettevalmistus/)
