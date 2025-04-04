@@ -17,6 +17,7 @@ Konstrueerime kõigepealt valgusfoore mudeli maketeerimislaual. Selleks läheb v
 - 3 220 ohm takistit
 
 Joonis maketeerimislaual ühendamisest näeb välja selline:
+
 ![ESP32 joonis](HTTP-info-saamine/pildid/1.png)
 
 Ühendused on:  
@@ -56,15 +57,15 @@ int rohelinePin = 7;
 
 Setup funktsioonis ütleme ESP32-le, et kasutame deklareeritud LED pin-e väljunditena. Lisame setup funktsiooni read:
 ```cpp
- pinMode(punanePin, OUTPUT);
- pinMode(kollanePin, OUTPUT);
- pinMode(rohelinePin, OUTPUT);
+pinMode(punanePin, OUTPUT);
+pinMode(kollanePin, OUTPUT);
+pinMode(rohelinePin, OUTPUT);
 ```
 Teeme uue funktsiooni nimega **punane**. Funktsiooni sees kirjutame punase LED pin-ile väärtuse HIGH, et see põlema panna. Lisame **delay,** et programm ootaks 3000 millisekundit ehk 3 sekundit, enne kui edasi liigub.
 ```cpp
 void punane() {
- digitalWrite(punanePin, HIGH);
- delay(3000);
+digitalWrite(punanePin, HIGH);
+delay(3000);
 }
 ```
 Et punane tuli enne kustumist vilguks, lisame ka for-tsükli, mille sees kirjutame pin-ile HIGH väärtuse, lisame 1000-millisekundilise delay, kirjutame pin-ile LOW väärtuse, ning lisame veel ühe 1000-millisekundilise delay.
@@ -188,7 +189,8 @@ void kollane() {
 {: .info}
 
 Ühendame oma ESP32 arvutiga ning vajutame IDE-s *upload* nuppu. Kui kõik on õigesti tehtud, näeme, et tuled lähevad põlema, vilguvad, ning lähevad kustu.
-![Arduino IDE](HTTP-info-saamine/pildid/2.png)
+
+![Arduino IDE](./pildid/2.png)
 
 Kui sinu ESP32-l on kaks kohta, kuhu USB kaabel ühendada, töötab tavaliselt Arduino IDE-st koodi laadimiseks pesa, mille juures on kirjas UART.
 {: .important}
@@ -512,12 +514,14 @@ Linuxi kasutajad saavad enda eelistatud käsureal teha:
 Node-RED-ile pääsed ligi veebilehitsejas minnes aadressile *localhost:1880* või *127.0.0.1:1880*. 
 
 Ekraani vasakus ääres leiad Node-RED sõlmede menüü või siis noole, millele klikkides menüü avaneb. Kerime seal menüüs alla, kuni leiame **dashboard 2** alt **slider** sõlme ja tirime selle ekraani keskele.
-![node-red sõlm](HTTP-info-saamine/pildid/3.png)
+
+![node-red sõlm](./pildid/3.png)
 
 Tehes topeltkliki keskele pandud sõlme peal, avaneb ekraani paremas ääres menüü sõlme omaduste muutmiseks. 
 
 Paneme sõlme nimeks *valgusfoor slider*, sildiks(label) *valgusfoor*, ning Range paneme min 1 ja max 60\. Output rippmenüüst valime “only on release”.
-![node-red slider konfiguratsioon](HTTP-info-saamine/pildid/4.png)
+
+![node-red slider konfiguratsioon](./pildid/4.png)
 
 Kui *group* väljal on valik *none*, ei ole sliderit dashboardil näha. Uue grupi saad teha vajutades plussmärgiga nuppu *group* välja kõrval.
 {: .important}
@@ -527,45 +531,55 @@ Vajutame üleval paremas nurgas nuppu *Deploy* ning läheme veebilehitsejas aadr
 Üks Node-RED eripäradest on see, et vaikimisi saadetakse infot signaalidena, mitte ei salvestata muutujates. See tähendab, et nt. HTTP päringule saab vastuse ainult see hetk, kui signaal saadetakse. See aga ei ole HTTP päringuga infot proovides saada väga praktiline. Et enda tehtud *slider*\-i väärtust salvestada nii, et me saaks seda kätte kogu aeg, kui Node-RED töötab, kasutame ***change*** sõlme.
 
 Võtame vasakult menüüst *change* sõlme ja tirime selle keskele. Teeme selle peal topeltkliki, paneme nimeks “valgusfoor väärtus”, ja *Rules* välja all teeme ühe *Set* reegli, kus paneme *flow.valgusfoor* väärtuseks *msg.payload*
-![Node-RED change sõlm](HTTP-info-saamine/pildid/5.png)
+
+![Node-RED change sõlm](./pildid/5.png)
 
 *flow* eesliidesega väärtused on Node-RED jaoks muutujad, mille väärtus säilitatakse. 
 
 *msg.payload* on väärtus, mille väärtus on tavaliselt sõlmede väljunditeks.
 
 Ühendame *Valgusfoor slider* sõlme *Valgusfoor väärtus* sõlmega, tirides ühe sõlme äärest nool teise sõlme äärde.
-![Node-RED flow](HTTP-info-saamine/pildid/6.png)
+
+![Node-RED flow](./pildid/6.png)
 
 Nüüd salvestatakse *dashboard*\-il antud *slider*\-i väärtus muutujana.
 
 Järgmisena loome HTTP päringu sõlme, et ESP32 saaks muutuja väärtuse kätte. Leia vasakult menüüst sõlm *http in* ning tiri see keskele. Tee sõlmel topeltklikk. Jätame meetodiks GET, paneme URL-iks /valgusfoor ning nimeks “valgusfoor HTTP sisse”.
-![HTTP sõlme konfiguratsioon](7.png)
+
+![HTTP sõlme konfiguratsioon](./pildid/7.png)
 
 Kasutame jälle *change* sõlme, et päringus saadava *payload*\-i väärtus muuta samaks, mis on *flow.valgusfoor*. Leiame vasakult menüüs *change* sõlme, lohistame selle keskele ning teeme selle peal topeltkliki. Paneme sõlme nimeks “valgusfoor muutuja payloadiks”, ja teeme *set* reegli, millega paneme *msg.payload* väärtuseks *flow.valgusfoor*.
-![Change sõlme konfiguratsioon](8.png)
+
+![Change sõlme konfiguratsioon](./pildid/8.png)
 
 Node-RED keskkonnas *flow* algusega muutujad kehtivad ühe *flow* ehk voolu sees (Voolud on eraldatud Node-RED siseste vahelehtedega). *msg* algusega muutujad kehtivad ainult omavahel ühendatud sõlmedes. See tähendab, et meil võib olla ühel Node-RED lehel näiteks mitu *msg.payload* muutujat, mis on üksteisest täiesti sõltumatud senikaua, kuni nendega tegelevad sõlmed ei ole ühendatud.
 {: .info}
 
 Järgmisena leiame vasakult menüüst *template* sõlme ja tirime selle samuti keskele. *Template* sõlme abil saame seadistada HTTP päringute(ja ka muude päringute) vastuseid. Paneme sõlme nimeks “valgusfoor HTTP template”, *Property* väärtuseks jätame *msg.payload* ning *Template* väärtuseks paneme lihtsalt “{{payload}}”.
-![Template sõlme konfiguratsioon](9.png)
+
+![Template sõlme konfiguratsioon](./pildid/9.png)
 
 Viimasena leiame vasakult menüüst *http response* sõlme. Tirime selle keskele ja teeme topeltkliki selle peal. Nimeks paneme “valgusfoor HTTP vastus” ja *Status code* väärtuseks paneme 200\.
-![HTTP response sõlme konfiguratsioon](10.png)
+
+![HTTP response sõlme konfiguratsioon](./pildid/10.png)
 
 Ühendame omavahel HTTP sõlmed ning vajutame jälle *Deploy*.
-![Node-RED flow](11.png)
+
+![Node-RED flow](./pildid/11.png)
 
 Praeguseks peaks meie Node-RED nägema välja selline:
-![Node-RED flow](12.png)
+
+![Node-RED flow](./pildid/12.png)
 
 Läheme uuesti dashboard-ile(localhost:1880/dashboard), võtame lahti Arduino IDE, laeme üles tehtud koodi, ja muudame *dashboard*\-il *slider*\-i väärtust. Kui kõik on õigesti tehtud, peaksid nüüd valgusfoore roheline ja punane tuli kestma kauem või vähem vastavalt Node-RED *dashboard*\-il antud väärtusele.
 
 Koodi kirjutades oli mitu korda mainitud **serial monitor**. Serial monitor on tööriist, mille abil ESP32 saab saata sõnumeid otse Arduino IDE-sse, ning seda on hea kasutada veaotsinguks. Et serial monitor avada, kasuta Arduino IDE-s klahvikombinatsiooni ctrl+shift+M või võta ülevalt lahti *Tools* rippmenüü ja vali sealt *Serial Monitor*.
-![Arduino IDE menüü](13.png)
+
+![Arduino IDE menüü](./pildid/13.png)
 
 Programmi *setup* funktsioonis panime kirja, et Serial Monitor hakkab tööle 115200 baudi peal. Baudide väärtust, mida Serial Monitor loeb, saab muuta Serial Monitori akna paremal pool.
-![Arduino IDE Serial Monitor](14.png)
+
+![Arduino IDE Serial Monitor](./pildid/14.png)
 
 Kui valgusfoor töötab, võib soovi korral selle kokku joota ning nt. papist valgusfoori mudelisse paigaldada.
 

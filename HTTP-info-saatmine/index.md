@@ -19,24 +19,31 @@ Teeme seekord kõigepealt valmis Node-RED poole. Paneme käima Node-RED(*docker 
 Võrreldes eelmise õpetusega on seekord Node-RED pool märksa lihtsam. Leia vasakult menüüst sõlm nimega *table*(*dashboard 2* sektsioonis) ning tiri see keskele(Jäta vasakule poole natuke ruumi\!). Tee sõlme peal topeltklikk, et avada menüü tabeli sätete muutmiseks. Paneme tabeli nimeks “parkimismaja tabel” ja sildiks(*label*) “parkimismaja”. *Max Rows* väärtuseks paneme 100\.  *Action* rippmenüüst vali “*Replace*”. *Search* valikus võta ära märge *Show* ning *Columns* valikus märge *Auto Calculate Columns*. 
 
 Menüüse ilmub uus valik, millega saad lisada tabelisse tulpasi. Lisa kaks tulpa: esimese väärtuseks saab *key:koht*, sildiks “Koht” ja tüübiks *text*. Teise tulba väärtuseks saab *key:vaba*, sildiks “Vaba” ning tüübiks *“Color(\#RRGGBB)”.*
+
 ![Node-RED table node](./pildid/1.png)
 
 Loome HTTP päringu sõlme. Leia vasakult menüüst sõlm nimega *http in* ja tiri see keskele. Paneme sõlme meetodiks POST, URL-iks /parkimine ja nimeks *Parkimismaja HTTP in*.
+
 ![Node-RED http in node](./pildid/2.png)
 
 Lisame ka *http response* sõlme, et HTTP päringut tehes ESP32 saaks vastuse, et päring oli edukas. Paneme sõlme nimeks Parkimismaja HTTP res ning koodiks 200\.
+
 ![Node-RED http response node](./pildid/.3png)
 
 Ühendame *Parkimismaja HTTP in* sõlme enda tehtud tabeli ning *HTTP response* sõlmedega.
+
 ![Node-RED flow](./pildid/4.png)
 
 Kui me nüüd *Deploy* vajutame ja läheme aadressile *localhost:1880/dashboard*, näeme, et tabeli päised on olemas, aga tabelis infot veel ei ole.
+
 ![Node-RED tabel](./pildid/5.png)
 
 Liigume ESP32 juurde. Parkimismaja mudeli konstrueerimiseks maketeerimislaual läheb vaja:
 - 2 nuppu
 - 2 10k oomist takistit
+
 Joonis maketeerimislaual olevast mudelist näeb välja selline:
+
 ![ESP32 joonis](./pildid/6.png)
 
 Ühendused on:  
@@ -108,7 +115,7 @@ bool eriMassiivid(bool arr1[], bool arr2[], int size){
 ```
 
 Loome funktsiooni, millega hakkame saatma HTTP päringut. Meie päring saab olema JSON formaadis ning näeb välja selline:  
-\[{“koht”:”1”,”vaba”:”jah”},{“koht”:”2”,”vaba”:”jah”}\]  
+`\[{“koht”:”1”,”vaba”:”jah”},{“koht”:”2”,”vaba”:”jah”}\]`  
 Kuna me tegime Red-NODE tabelisse vaba koha välja lugema RGB värvi väärtust, saadame võtme “vaba” väärtused RGB värvikoodide kujul. Kui koht on vaba, saab väärtuseks “\#03fc03”(Roheline) ning kui ei ole, “\#fc1303”(Punane).
 
 Tegelikult oleks meil lihtsam kasutada Arduino JSON teeki, selle asemel, et JSON objekt manuaalselt teha. Siin õpetuses ehitame esialgu JSON objekti manuaalselt, et harjutada ESP32-s sõnedega töötamist. Arduino JSON teegiga tutvume edaspidi.
@@ -492,7 +499,8 @@ Laeme programmi ESP32-le, avame Node-RED dashboard-i ning proovime nuppe vajutad
 - Lisa ESP32-le veel 3 nuppu, millega parkimiskoha kohta infot edastada.  
 - Lisa tabelisse veerg, kus on kirjas, mitu korda parkimiskohta on kasutatud. Edasta see info ESP32-ga.
 
-**Kasutatud allikad:** 
+**Kasutatud allikad:**
+
 [https://randomnerdtutorials.com/esp32-http-get-post-arduino/](https://randomnerdtutorials.com/esp32-http-get-post-arduino/)   
 [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST)   
 [https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/](https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/)   

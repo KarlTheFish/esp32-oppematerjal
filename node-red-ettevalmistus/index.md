@@ -19,6 +19,7 @@ Node-RED installimine ning käivitamine on lihtne. Kui Docker on installitud, jo
 (Linux kasutajatele: jooksuta terminalis sama käsku sudo õigustega)
 
 Esimesel käivitamisel läheb natuke aega. Kui Node-RED on käima hakanud, saad sinna ligi minnes veebibrauseris aadressile *localhost:1880*
+
 ![Node-RED](./pildid/1.png)
 
 Paigaldame *Node-RED*\-ile ka *Dashboard 2.0* laienduse, et enda targa linna kontrollimiseks luua veebis graafiline kasutajaliides. Selleks leiad õpetuse [siit](https://dashboard.flowfuse.com/getting-started.html).
