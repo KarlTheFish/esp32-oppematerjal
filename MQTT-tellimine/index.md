@@ -40,7 +40,7 @@ Kui oled Mosquitto installinud Linux operatsioonisüsteemiga arvutisse, mine fai
 `allow_anonymous true`
 
 Linux peal Mosquitto käivitamiseks sisesta käsureal:  
-`sudo mosquitto \-c /etc/mosquitto/mosquitto.conf && sudo tail \-f /var/log/mosquitto/mosquitto.log`
+`sudo mosquitto -c /etc/mosquitto/mosquitto.conf && sudo tail -f /var/log/mosquitto/mosquitto.log`
 
 Mosquitto töö lõpetamiseks saad teha käsureal `ctrl + c`.
 
@@ -60,6 +60,7 @@ Joonis maketeerimislaual ühendamiseks:
 Avame Arduino IDE ning loome uue sketši. 
 
 MQTT protokolliga suhtlemiseks läheb meil vaja välist teeki nimega PubSubClient. Et see installida, võta vasakult lahti “Library manager” ning kirjuta otsinguribale “PubSubClient”. Installi PubSubClient nimeline teek, mille autor on Nick O’Leary.
+
 ![PubSubClient teek](./pildid/2.png)
 
 Liigume programmi juurde. Kõigepealt ütleme programmi alguses, et kasutame WiFi ning PubSubClient teeke.
@@ -351,7 +352,7 @@ void loop() {
 }
 ```
 
-ESP32 poolt on nüüd kõik vajalik tehtud. Liigume Node-RED juurde. Ava arvuti veebilehitsejas Node-RED(localhost:1880 või 127.0.0.1:1880) ning tiri vasakult menüüs keskele *Dashboard 2.0* alt helesinine *switch* sõlm
+ESP32 poolt on nüüd kõik vajalik tehtud. Liigume Node-RED juurde. Ava arvuti veebilehitsejas Node-RED(tavaliselt *localhost:1880* või *127.0.0.1:1880*) ning tiri vasakult menüüs keskele *Dashboard 2.0* alt helesinine *switch* sõlm
 
 ![Node-RED Switch](./pildid/3.png)
 
@@ -404,4 +405,4 @@ Vajuta Node-RED-is *Deploy* nuppu, mine Node-RED dashboardile, ja pane ESP32 tö
 [https://pubsubclient.knolleary.net/api](https://pubsubclient.knolleary.net/api)
 
 
-[Järgmine õpetus](../node-red-ettevalmistus/)
+[Järgmine õpetus](../MQTT-avaldamine/)
