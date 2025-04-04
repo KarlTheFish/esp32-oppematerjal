@@ -27,7 +27,7 @@ Joonis maketeerimislaual ühendamisest näeb välja selline:
 Samad ühendused on kollase ja rohelise LED-iga, kuid kollase LED-i ees olev takisti on ühendatud 6\. ning rohelise LED-i ees olev takisti 7\. pin-iga.
 
 Avame Arduino IDE ning valime enda arenduslaua(Õige arenduslaua valimisest oli juttu 0.1. peatükis). Alguses on meil kohe ees selline kood:
-````Arduino
+```Arduino
 void setup() {
  // put your setup code here, to run once:
 
@@ -43,16 +43,16 @@ void loop() {
   
 
 }
-````
+```
 
 Arduino vajab töötamiseks neid kahte funktsiooni. **setup** funktsioon käivitub siis, kui esp32 sisse lülitatakse, ning **loop** funktsioon käivitub korduvalt alates setup funktsiooni lõpust kuni esp32 välja lülitamiseni. 
 
 Deklareerime kõigepealt pin-id, millega LED tuled on ühendatud. Pin numbrid deklareeritakse täisarv(int) tüüpi muutujatega. Kirjutame enne setup funktsiooni:
-~~~Arduino
+```Arduino
 int punanePin = 5;
 int kollanePin = 6;
 int rohelinePin = 7;
-~~~
+```
 
 Setup funktsioonis ütleme ESP32-le, et kasutame deklareeritud LED pin-e väljunditena. Lisame setup funktsiooni read:
 ~~~Arduino
