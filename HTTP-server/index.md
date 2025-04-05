@@ -11,7 +11,7 @@ Siiamaani oleme tutvunud ESP32 kasutamisega HTTP kliendina, mis teeb päringuid.
 
 Selles õpetuses läheb vaja kolme ESP32 arenduslauda, kahte DHT11, DHT21 või DHT22 andurit ja kahte 10k oomist takistit.
 
-Joonised esime ning teise ESP32 mudelist on identsed 4\. õpetuses oleva joonisega:
+Joonised esimesest ning teisest ESP32 mudelist on identsed 4\. õpetuses oleva joonisega:
 ![text](../MQTT-avaldamine/pildid/1.png)
 
 Kolmanda ESP32-ga pole vaja midagi ühendada.
@@ -102,7 +102,7 @@ void setup() {
 
 ESP32 HTTP serverile on võimalik teha päringuid, kasutades ESP32 lokaalset IP-d, kuid ESP32 IP võib iga kord WiFi-ga ühendudes muutuda, ning iga kord ESP32 uue võrguga ühendamisel Serial Monitorist hakata ESP32 IP-d vaatama ei ole kuigi mugav ega praktiline. Pealegi on paljude ESP32-de puhul tüütu ja keeruline igaühe IP aadressi meeles pidada. 
 
-Et oma elu lihtsamaks teha, kasutame MDNS-i ehk ***M**ulticast **DNS***. Tegu on protokolliga, mille abil lokaalses võrgus olev seade saab enda nime ja IP aadressi saata kõikidele teistele seadmetele, mis võrgus on, ilma, et vaja oleks keskset DNS serverit. 
+Et oma elu lihtsamaks teha, kasutame MDNS-i ehk **M**ulticast **DNS**. Tegu on protokolliga, mille abil lokaalses võrgus olev seade saab enda nime ja IP aadressi saata kõikidele teistele seadmetele, mis võrgus on, ilma, et vaja oleks keskset DNS serverit. 
 
 Alustame ESP32-s MDNS-i, kasutades nime, mille me programmi alguses ESP32-le andsime.
 
@@ -712,4 +712,4 @@ Kui me nüüd Node-RED üleval paremas nurgas *Deploy* nuppu vajutame ja läheme
 - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status)
 
 
-[Järgmine õpetus](../node-red-ettevalmistus/)
+[Järgmine õpetus](../WebSocket-1/)
