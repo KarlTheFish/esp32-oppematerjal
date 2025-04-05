@@ -346,4 +346,4 @@ Kui me nüüd vajutame üleval paremal nurgas *Deploy*, paneme ESP32 programmi t
 -  [https://flows.nodered.org/flow/40116bb72b83e02ceb01b1ca61f97505](https://flows.nodered.org/flow/40116bb72b83e02ceb01b1ca61f97505)
 
 
-[Järgmine õpetus](../node-red-ettevalmistus/)
+[Järgmine õpetus](../NTP-protokoll/)

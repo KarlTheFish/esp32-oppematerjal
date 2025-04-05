@@ -350,4 +350,4 @@ Kui Node-RED uuesti deploy-da samal ajal, kui ESP32 on ühendatud, WebSocket üh
 - [https://randomnerdtutorials.com/esp32-ssd1306-oled-display-arduino-ide/](https://randomnerdtutorials.com/esp32-ssd1306-oled-display-arduino-ide/)
 
 
-[Järgmine õpetus](../Websocket-2/)
+[Järgmine õpetus](../WebSocket-2/)
