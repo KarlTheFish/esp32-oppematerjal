@@ -2,7 +2,7 @@
 title: 0.1. esp32. Arduino IDE.
 layout: default
 nav_order: 2
-parent: Ettevalmistus
+has_children: false
 ---
 (TODO - Mingi väike tutvustus ESP32 kohta)
 {: .todo}
