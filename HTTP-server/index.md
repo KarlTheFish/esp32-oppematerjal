@@ -1,5 +1,5 @@
 ---
-title: HTTP server esp32 peal. Infovahetus mitme ESP32 vahel. Keskmine õhuniiskus ja temperatuur.
+title: 6. HTTP server esp32 peal. Infovahetus mitme ESP32 vahel. Keskmine õhuniiskus ja temperatuur.
 layout: default
 nav_order: 9
 has_children: false
