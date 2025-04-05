@@ -17,7 +17,7 @@ Kursus on loodud iseseisvaks läbimiseks, aga seda võib kasutada ka õppematerj
 - Vajalik on eesti keele oskus, inglise keele oskus tuleb kasuks.
 - Eelteadmised Arduinost, ESP32-st ja robootikast tulevad kasuks, kuid ei ole vajalikud.
 
-Kursusel on vaja minimaalselt ühte ESP32 arenduslauda ning arvutit. Kui on võimalus kasutada mitut ESP32-te korraga, tuleb see ainult kasuks.
+Õpetuste läbimiseks on vaja vähemalt ühte ESP32 arenduslauda ning arvutit. Kasuks tuleb võimalus kasutada mitut ESP32-te korraga. Kõige rohkem kasutatakse õpetustes kuni kolme ESP32-te.
 
 Õpetustes ning näidetes on kasutatud ESP32-S3 arenduslauda, kuid teised ESP32 arenduslauad peaksid autori teadmiste kohaselt samuti sobima.
 
