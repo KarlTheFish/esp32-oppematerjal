@@ -1,8 +1,8 @@
 ---
 title: 0.1. esp32. Arduino IDE.
 layout: default
-nav_order: 2
-has_children: false
+nav_order: 3
+parent: Ettevalmistus
 ---
 (TODO - Mingi väike tutvustus ESP32 kohta)
 {: .todo}
@@ -17,30 +17,30 @@ Kui Arduino IDE on installitud, lisame toe ESP32 arenduslaudadele.
 
 Teeme lahti Arduino IDE ning valime üleval menüüs *File -> preferences…*
 
-![](./pildid/1.png)
+![](./pildid-1/1.png)
 
 Avanenud aknas lisame Additional boards manager URLs: tekstikasti järgneva teksti:
 `https://dl.espressif.com/dl/package_esp32_index.json`
 
-![](./pildid/2.png)
+![](./pildid-1/2.png)
 
 Vajutame OK. Seejärel võtame vasakult menüüst lahti *Boards Manager*.
 
-![](./pildid/3.png)
+![](./pildid-1/3.png)
 
 otsime “esp32” ning installime “esp32 by Esspressif Systems” arenduslaua liidese.
 
-![](./pildid/4.png)
+![](./pildid-1/4.png)
 
 Ühendame oma ESP32 USB kaabli abil arvutiga. Ülevalt asuvast rippmenüüst valime “*Select other board and port…*”. Avaneb menüü, kus saame valida USB pesa, millega ESP32 on ühendatud, ning oma arenduslaua.
 
-![](./pildid/5.png)
+![](./pildid-1/5.png)
 
-![](./pildid/6.png)
+![](./pildid-1/6.png)
 
 Kuvatõmmisel olev valik töötab ESP32-S3 arenduslauaga. Kui sa ei ole kindel, mis arenduslaud sul on ning mida sa peaksid Arduino IDE menüüs valima, leiad arenduslaua mudeli kohta informatsiooni arenduslaua pealt ning internetist.
 
-![](./pildid/7.jpg)
+![ESP32 arenduslauad](./pildid-1/7.jpg)
 *Erinevate arenduslaudade mudelid. Parempoolset arenduslauda on kasutatud õpetuste kirjutamisel ning testimisel.*
 
 Kui õige arenduslaud on valitud, olemegi valmis ESP32-te Arduino IDE abil programmeerima!
