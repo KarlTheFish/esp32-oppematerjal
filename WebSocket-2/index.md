@@ -275,6 +275,7 @@ Järgmisena lisame *switch* sõlme. Paneme *switch* sõlme nimeks *Kiirus tingim
 Esimene tingimus on, et kiirus väärtus oleks suurem, kui 0, ja väiksem, kui *flow.kiiruspiirang* muutuja väärtus ehk kiiruspiirang. Seda hakkame me määrama *dashboard-*il tekstiväljal.
 
 Kontrollides, et kiirus oleks suurem, kui 0, väldime ebavajaliku info edastamist. Kiiruse väärtus võib olla alla nulli näiteks siis, kui objekt liigub sensorist kaugemale. (Soovi korral võib muidugi lubada negatiivseid väärtuseid, et kiirust mõõta kaherealise tee mõlemal real, kuid et hoida õpetus võimalikult lihtsana, piirdume praegu ühe sõidureaga.). Kui väärtus on suurem kui 0, liigume väärtuse lisamisega tabelisse edasi.
+{: .info}
 
 Teise tingimusega määratakse, mida teha, kui kiirus on suurem, kui kiiruspiirang.
 
