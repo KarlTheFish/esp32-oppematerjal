@@ -1,8 +1,8 @@
 ---
-title: 0.1. esp32. Arduino IDE. Ettevalmistus
+title: 0.1. esp32. Arduino IDE.
 layout: default
 nav_order: 2
-has_children: false
+parent: Ettevalmistus
 ---
 (TODO - Mingi väike tutvustus ESP32 kohta)
 {: .todo}
@@ -40,14 +40,15 @@ otsime “esp32” ning installime “esp32 by Esspressif Systems” arenduslaua
 
 Kuvatõmmisel olev valik töötab ESP32-S3 arenduslauaga. Kui sa ei ole kindel, mis arenduslaud sul on ning mida sa peaksid Arduino IDE menüüs valima, leiad arenduslaua mudeli kohta informatsiooni arenduslaua pealt ning internetist.
 
-![](./pildid/7.png)
+![](./pildid/7.jpg)
 *Erinevate arenduslaudade mudelid. Parempoolset arenduslauda on kasutatud õpetuste kirjutamisel ning testimisel.*
 
 Kui õige arenduslaud on valitud, olemegi valmis ESP32-te Arduino IDE abil programmeerima!
 
-Linux kasutajatele võib programmi lauale laadimisel tulla viga *errno13 permission denied* või muud taolised vead. Tavaliselt on lahenduseks käsureal tegemine: *sudo chmod a+rw /dev/ttyUSB0* 
+Linux kasutajatele võib programmi lauale laadimisel tulla viga *errno13 permission denied* või muud taolised vead. Tavaliselt on lahenduseks käsureal tegemine: *sudo chmod a+rw /dev/ttyUSB0*
+{: .important}
 
-Rohkem informatsiooni Arduino ajaloo kohta saab lugeda [siit](https://spectrum.ieee.org/the-making-of-arduino)
+Rohkem Arduino ajaloo kohta saab lugeda [siit](https://spectrum.ieee.org/the-making-of-arduino)
 
 **Kasutatud allikad:**  
 - [https://www.arduino.cc/en/Guide/Introduction](https://www.arduino.cc/en/Guide/Introduction)
