@@ -82,4 +82,4 @@ Kuidas teha nii, et rohelise ja punase tule kestust saaks eraldi reguleerida?
 - [https://www.digikey.com/en/maker/tutorials/2022/how-to-use-variables-in-node-red](https://www.digikey.com/en/maker/tutorials/2022/how-to-use-variables-in-node-red)  
 - [https://flowfuse.com/node-red/core-nodes/change/](https://flowfuse.com/node-red/core-nodes/change/)
 
-[Järgmine õpetus](../http-info-saatmine)
+[Järgmine õpetus](../HTTP-info-saatmine)
