@@ -73,7 +73,7 @@ Mosquitto paroolifail on loodud.
 Nüüd võib Mosquitto käivitada(Või taaskäivitada, kui see käib teenusena).
 
 
-[esp32-ga MQTT info turvaliselt saamine](../HTTP-server/)
+[esp32-ga MQTT info turvaliselt saamine](./esp32-mqtt)
 
 
 **Kasutatud allikad:**
