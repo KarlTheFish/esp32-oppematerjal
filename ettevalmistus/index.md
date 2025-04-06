@@ -5,16 +5,6 @@ nav_order: 2
 has_children: true
 ---
 
-![](HTTP-info-saamine/pildid/1.png)
+[ESP32 ja Arduino IDE ettevalmistus](./ettevalmistus-1)
 
-[Arduino kodulehelt](https://www.arduino.cc/en/software)
-
-[Esimene õpetus](./esp32-arduinoIDE-ettevalmistus)
-
-{: .info}
-
-{: .important}
-
-{: .todo}
-
-[Järgmine õpetus](./ettevalmistus-1)
+[Node-RED ettevalmistus](./ettevalmistus-2)
