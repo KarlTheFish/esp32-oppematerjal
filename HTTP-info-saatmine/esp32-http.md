@@ -1,8 +1,8 @@
 ---
 title: esp32 HTTP info saatmine
 layout: default
-nav_order: 7
-parent: 2. HTTP info saatmine. Parkimismaja
+nav_order: 10
+parent: 2. HTTP info saatmine. Parkimismaja.
 ---
 
 Parkimismaja mudeli konstrueerimiseks maketeerimislaual läheb vaja:

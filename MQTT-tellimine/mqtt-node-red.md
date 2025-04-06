@@ -1,7 +1,7 @@
 ---
 title: MQTT teemade kohta info avaldamine Node-RED-iga
 layout: default
-nav_order: 9
+nav_order: 13
 parent: 3. MQTT protokoll. Teemade tellimine. Tänavavalgusti.
 ---
 

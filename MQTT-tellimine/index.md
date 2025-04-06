@@ -1,7 +1,7 @@
 ---
 title: 3. MQTT protokoll. Teemade tellimine. Tänavavalgusti.
 layout: default
-nav_order: 7
+nav_order: 11
 has_children: true
 ---
 

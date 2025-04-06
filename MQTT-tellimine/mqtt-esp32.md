@@ -1,7 +1,7 @@
 ---
 title: MQTT teemade kohta info tellimine ESP32-ga
 layout: default
-nav_order: 8
+nav_order: 12
 parent: 3. MQTT protokoll. Teemade tellimine. Tänavavalgusti.
 ---
 

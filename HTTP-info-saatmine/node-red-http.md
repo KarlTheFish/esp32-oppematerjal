@@ -1,8 +1,8 @@
 ---
 title: Node-RED HTTP info saamine
 layout: default
-nav_order: 6
-parent: 2. HTTP info saatmine. Parkimismaja
+nav_order: 9
+parent: 2. HTTP info saatmine. Parkimismaja.
 ---
 
 Teeme seekord kõigepealt valmis Node-RED poole. Paneme käima Node-RED(*docker start TarkLinn* või *sudo docker start TarkLinn)* ning läheme veebilehitsejas aadressile *localhost:1880*.
