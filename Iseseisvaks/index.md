@@ -1,7 +1,7 @@
 ---
 title: 10. Iseseisvaks ESP32-ga töötamiseks.
 layout: default
-nav_order: 31
+nav_order: 32
 has_children: true
 ---
 

@@ -4,14 +4,9 @@ layout: default
 nav_order: 2
 parent: Ettevalmistus
 ---
-(TODO - Mingi väike tutvustus ESP32 kohta)
-{: .todo}
+ESP32 on Espressif firma poolt arendatud mikrokontroller, millel on sisseehitatud 2.4 Ghz wifi ja bluetooth ühenduste võimalused. ESP32 mikrokontrollerid on loodud töötama väikse energiakuluga, mille tõttu on need kasulikud asjade interneti, kaasaskantavate seadmete ja muude sarnaste projektide jaoks. ESP32 arenduslauad on arenduslauad, mille peal on ESP32 mikrokontroller. Et ESP32 programmeerida, kasutame Arduino arendusplatvormi. 
 
-Et ESP32 programmeerida, kasutame Arduino arendusplatvormi. Selle saame arvutile alla laadida [Arduino kodulehelt](https://www.arduino.cc/en/software).
-
-Arduino on vabavaraline platvorm, mis on loodud lihtsaks ning ligipääsetavaks elektroonika arenduseks.
-(TODO - Rohkem tutvustust Arduino kohta?)
-{: .todo}
+Arduino on vabavaraline platvorm, mis on loodud lihtsaks ning ligipääsetavaks elektroonika arenduseks. ESP32 programmeerimiseks kasutame Arduino IDE-d ning Arduino programmeerimiskeelt, mis on sarnane C++ programmeerimiskeelele. Arduino IDE saame arvutile alla laadida [Arduino kodulehelt](https://www.arduino.cc/en/software).
 
 Kui Arduino IDE on installitud, lisame toe ESP32 arenduslaudadele.
 
@@ -54,3 +49,4 @@ Rohkem Arduino ajaloo kohta saab lugeda [siit](https://spectrum.ieee.org/the-mak
 
 **Kasutatud allikad:**  
 - [https://www.arduino.cc/en/Guide/Introduction](https://www.arduino.cc/en/Guide/Introduction)
+- [https://www.espressif.com/en/products/socs/esp32](https://www.espressif.com/en/products/socs/esp32)
