@@ -82,8 +82,8 @@ bool eriMassiivid(bool arr1[], bool arr2[], int size){
 ```
 
 Loome funktsiooni, millega hakkame saatma HTTP päringut. Meie päring saab olema JSON formaadis ning näeb välja selline:  
-`\[{“koht”:”1”,”vaba”:”jah”},{“koht”:”2”,”vaba”:”jah”}\]`  
-Kuna me tegime Red-NODE tabelisse vaba koha välja lugema RGB värvi väärtust, saadame võtme “vaba” väärtused RGB värvikoodide kujul. Kui koht on vaba, saab väärtuseks “\#03fc03”(Roheline) ning kui ei ole, “\#fc1303”(Punane).
+`[{“koht”:”1”,”vaba”:”jah”},{“koht”:”2”,”vaba”:”jah”}]`  
+Kuna me tegime Red-NODE tabelisse vaba koha välja lugema RGB värvi väärtust, saadame võtme “vaba” väärtused RGB värvikoodide kujul. Kui koht on vaba, saab väärtuseks   `#03fc03`(Roheline) ning kui ei ole, `#fc1303`(Punane).
 
 Tegelikult oleks meil lihtsam kasutada Arduino JSON teeki, selle asemel, et JSON objekt manuaalselt teha. Siin õpetuses ehitame esialgu JSON objekti manuaalselt, et harjutada ESP32-s sõnedega töötamist. Arduino JSON teegiga tutvume edaspidi.
 {: .info}

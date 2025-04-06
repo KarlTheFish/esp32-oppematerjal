@@ -49,7 +49,7 @@ Samuti ütleme ära, kas me kasutame DHT11, DHT21, või DHT22 andurit. Siin näi
 #define DHTTYPE DHT11
 ```
 
-Deklareerime 5 muutujat: pin-i, millega DHT andur on ühendatud, ujuvkomaarvud temperatuuri ning õhuniiskuse jaoks, ja char massiivid, kuhu hakkame salvestama sõnumit, mida tahame MQTT-ga saata.
+Deklareerime 5 muutujat: pin-i, millega DHT andur on ühendatud, ujuvkomaarvud temperatuuri ning õhuniiskuse jaoks, ja *char* massiivid, kuhu hakkame salvestama sõnumit, mida tahame MQTT-ga saata.
 
 ```cpp
 const int DhtPin = 4;

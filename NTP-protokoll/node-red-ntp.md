@@ -1,7 +1,7 @@
 ---
 title: 9. NTP protokoll. Ülekäiguraja statistika
 layout: default
-nav_order: 30
+nav_order: 31
 has_children: true
 ---
 
@@ -55,5 +55,5 @@ void setup() {
 }
 ```
 
-[Järgmine õpetus](../iseseisvaks)
+[Järgmine õpetus](../Iseseisvaks)
 

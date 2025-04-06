@@ -50,7 +50,7 @@ Linux kasutajatele võib programmi lauale laadimisel tulla viga *errno13 permiss
 
 Rohkem Arduino ajaloo kohta saab lugeda [siit](https://spectrum.ieee.org/the-making-of-arduino)
 
+[Järgmine õpetus](./ettevalmistus-2)
+
 **Kasutatud allikad:**  
 - [https://www.arduino.cc/en/Guide/Introduction](https://www.arduino.cc/en/Guide/Introduction)
-
-[Järgmine õpetus](./ettevalmistus-2)

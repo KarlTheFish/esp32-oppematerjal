@@ -9,10 +9,10 @@ Joonis ESP32 mudelist maketeerimislaual näeb välja selline:
 
 ![ESP32 joonis](./pildid/8.png)
 
-SSD1306 VCC on ühendatud ESP32 5V pin-iga  
-SSD1306 GND on ühendatud ESP32 maandusega  
-SSD1306 SCL on ühendatud ESP32 8\. pin-iga  
-SSD1306 SDA on ühendatud ESP32 9\. pin-iga
+- SSD1306 VCC on ühendatud ESP32 5V pin-iga  
+- SSD1306 GND on ühendatud ESP32 maandusega  
+- SSD1306 SCL on ühendatud ESP32 8\. pin-iga  
+- SSD1306 SDA on ühendatud ESP32 9\. pin-iga
 
 Avame Arduino IDE. Installime kõigepealt välised teegid, mida meil vaja läheb. Selleks ava vasakult menüüst *Library Manager* ja installi teegid:  
 **Adafruit SSD1306** *by Adafruit*  

@@ -73,15 +73,15 @@ void setup() {
 }
 ```
 
-Lisame setup funktsiooni veel kaks rida:
+Lisame *setup* funktsiooni veel kaks rida:
 ```cpp
 MQTTclient.setServer(MQTT_broker, 1883);
 MQTTclient.setCallback(callback);
 ```
 
-MTQQclient on meie varasemalt defineeritud PubSubClient. Esimene rida paneb PubSubClient vahendusserveriks meie defineeritud serveri pordil 1883\. Teine rida annab PubSubClient-ile funktsiooni nimega callback, mis käivitub, kui PubSubClient saab mingit infot. Callback funktsioon ei ole aga meil veel defineeritud.
+MTQQclient on meie varasemalt defineeritud PubSubClient. Esimene rida paneb PubSubClient vahendusserveriks meie defineeritud serveri pordil 1883\. Teine rida annab PubSubClient-ile funktsiooni nimega callback, mis käivitub, kui PubSubClient saab mingit infot. *Callback* funktsioon ei ole aga meil veel defineeritud.
 
-Praeguseks peaks setup funktsioon meil välja nägema selline:
+Praeguseks peaks *setup* funktsioon meil välja nägema selline:
 ```cpp
 void setup() {
  Serial.begin(115200);
@@ -145,7 +145,7 @@ void loop() {
 }
 ```
 
-Loome kaks uut funktsiooni: üks, kus vastavalt saadud sõnumile lülitatakse LED tuld sisse ja välja, ning teine, mis on MQTT töö jaoks vajalik callback funktsioon.
+Loome kaks uut funktsiooni: üks, kus vastavalt saadud sõnumile lülitatakse LED tuld sisse ja välja, ning teine, mis on MQTT töö jaoks vajalik *callback* funktsioon.
 
 LED tulede sisse ning välja lülitamise funktsioon näeb välja selline:
 ```cpp
@@ -208,7 +208,7 @@ void callback(String topic, byte* message, unsigned int length){
 }
 ```
 
-Ning terve programm peaks olema selline:
+Ning terve programm näeb välja selline:
 ```cpp
 //Deklareerime teegid, mida meil vaja läheb
 #include <WiFi.h>

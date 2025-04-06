@@ -32,7 +32,7 @@ docker start TarkLinn
 sudo docker start TarkLinn
 {: .important}
 
+[Järgmine õpetus](../HTTP-info-saamine/)
+
 **Kasutatud allikad:**  
 [https://nodered.org/about/](https://nodered.org/about/)
-
-[Järgmine õpetus](../HTTP-info-saamine/)
