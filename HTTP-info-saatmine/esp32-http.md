@@ -466,11 +466,12 @@ Laeme programmi ESP32-le, avame Node-RED dashboard-i ning proovime nuppe vajutad
 - Lisa ESP32-le veel 3 nuppu, millega parkimiskoha kohta infot edastada.  
 - Lisa tabelisse veerg, kus on kirjas, mitu korda parkimiskohta on kasutatud. Edasta see info ESP32-ga.
 
+
+[Järgmine õpetus](../MQTT-tellimine/)
+
 **Kasutatud allikad:**
 
 - [https://randomnerdtutorials.com/esp32-http-get-post-arduino/](https://randomnerdtutorials.com/esp32-http-get-post-arduino/)   
 - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST)   
 - [https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/](https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/)   
 - [https://docs.arduino.cc/language-reference/en/variables/data-types/array/](https://docs.arduino.cc/language-reference/en/variables/data-types/array/)
-
-[Järgmine õpetus](../MQTT-tellimine/)
