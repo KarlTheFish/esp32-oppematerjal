@@ -1,8 +1,8 @@
 ---
 title: 10. Iseseisvaks ESP32-ga töötamiseks.
 layout: default
-nav_order: 13
-has_children: false
+nav_order: 31
+has_children: true
 ---
 
 Oleme jõudnud kursuse lõppu. Tegelikult oleme aga tutvunud vaid mõnede populaarsemate ESP32 võimaluste ja anduritega. ESP32 ja asjade interneti maailm on suur ja lai. Et selle maailmaga tutvumist natuke lihtsamaks teha, on siin peatükis välja toodud mõned kohad, kus leida õpetusi ja dokumentatsiooni. Lisaks leiad siit näpunäiteid muude sensorite kasutamiseks.

@@ -1,8 +1,8 @@
 ---
-title: 11. Tagasiside
+title: Tagasiside
 layout: default
-nav_order: 14
-has_children: false
+nav_order: 32
+parent: 10. Iseseisvaks ESP32-ga töötamiseks.
 ---
 
 Õppematerjal on valminud Tallinna Ülikooli informaatika bakalaureuse õppekava löputöö raames. 
