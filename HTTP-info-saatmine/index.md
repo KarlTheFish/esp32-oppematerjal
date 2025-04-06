@@ -14,4 +14,4 @@ TODO: Rohkem infot HTTP POST kohta?? Rohkem infot JSON kohta??
 
 Meie parkimismaja jälgimise süsteem hakkab töötama nii: Node-RED dashboard-il on tabel, kus on kirjas parkimiskoha number ning selle juures punane värv, kui parkimiskoht on hõivatud, ning roheline värv, kui parkimiskoht on vaba. ESP32 poolt muudame parkimiskoha olekut nupuga, mille vajutamisel parkimiskoha olek muutub, ning edastame info parkimiskohtade kohta JSON objektina HTTP POST päringu abil.
 
-[Järgmine õpetus](./node-red-http)
+[HTTP POST päringu vastuvõtmine Node-RED-is](./node-red-http)
