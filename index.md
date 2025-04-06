@@ -23,4 +23,4 @@ Kursus on loodud iseseisvaks läbimiseks, aga seda võib kasutada ka õppematerj
 
 Õpetus on valminud 2025. aastal Tallinna Ülikooli informaatika õppekava bakalaureuse lõputööna.
 
-[Esimene õpetus](./esp32-arduinoIDE-ettevalmistus)
+[Esimene õpetus](./ettevalmistus/ettevalmistus-1)

@@ -1,8 +1,8 @@
 ---
-title: 0.2. Node-RED. Ettevalmistus 2
+title: 0.2. Node-RED.
 layout: default
 nav_order: 3
-has_children: false
+parent: Ettevalmistus
 ---
 
 ESP32 on nüüd arenduseks valmis. Kuna aga tegu on asjade interneti kursusega, võiks meil olla ka enda arvutis mingi keskkond, millega ESP32 saaks suhelda. 
@@ -20,7 +20,7 @@ Node-RED installimine ning käivitamine on lihtne. Kui Docker on installitud, jo
 
 Esimesel käivitamisel läheb natuke aega. Kui Node-RED on käima hakanud, saad sinna ligi minnes veebibrauseris aadressile *localhost:1880*
 
-![Node-RED](./pildid/1.png)
+![Node-RED](./pildid/8.png)
 
 Paigaldame *Node-RED*\-ile ka *Dashboard 2.0* laienduse, et enda targa linna kontrollimiseks luua veebis graafiline kasutajaliides. Selleks leiad õpetuse [siit](https://dashboard.flowfuse.com/getting-started.html).
 

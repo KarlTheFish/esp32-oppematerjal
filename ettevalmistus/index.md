@@ -17,4 +17,4 @@ has_children: true
 
 {: .todo}
 
-[Järgmine õpetus](./ettevalmistus-1/)
+[Järgmine õpetus](./ettevalmistus-1)
