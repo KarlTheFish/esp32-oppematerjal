@@ -1,8 +1,8 @@
 ---
-title: 9. NTP protokoll. Ülekäiguraja statistika
+title: Node-RED ja RTC
 layout: default
 nav_order: 31
-has_children: true
+parent: 9. NTP protokoll. Ülekäiguraja statistika
 ---
 
 Liigume Node-RED juurde. Leiame vasakult *websocket in* sõlme. Paneme selle tüübiks *listen on*, URL teeks /ylekaigurada, ning nimeks *Ülekäigurada WebSocket sisse*.
