@@ -33,6 +33,7 @@ Vajutame paremal üleval ääres olevat nuppu *Add*. Oleme tagasi MQTT sõlme s�
 >  0 \- sõnum saadetakse maksimaalselt üks kord ning saatja ei saa infot, kas ta sõnum saadi kätte.  
  > 1 \- sõnum saadetakse vähemalt ühe korra, saatja saadab sõnumit korduvalt, kuni ta on tagasi saanud kinnituse, et sõnum saadi kätte.  
  >  2 \- sõnum saadetakse täpselt üks kord. Saatja saadab vastuvõtjale info, et hakkab sõnumit saatma. Kui saatja on saanud tagasi info, et vastuvõtja on valmis sõnumit vastu võtma, saadab ta sõnumi. Kui vastuvõtja on sõnumi kätte saanud, saadab ta saatjale selle kohta sõnumi. 
+ >  
 > Retain määrab, kas viimati saadetud sõnum säilitatakse, või mitte. Kui *Retain* väärtuseks on *Off*, ei saa peale sõnumit avaldamist ühendunud kliendid viimati avaldatud sõnumi kohta infot.
 
 Ühendame kokku *valgus lüliti* ja *valgus qmtt* sõlmed.
