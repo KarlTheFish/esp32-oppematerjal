@@ -5,12 +5,9 @@ nav_order: 11
 has_children: true
 ---
 
-**MQTT**(**M**essage **Q**ueuing **T**elemetry **T**ransport) on sõnumiedastuse protokoll, (mis on loodud suhtluseks erinevate seadmete vahel(source????)). MQTT protokoll võtab vähe võrguressurssi. 
+**MQTT**(**M**essage **Q**ueuing **T**elemetry **T**ransport) on TCP/IP protokolli peal töötav sõnumiedastuse protokoll, mis on loodud seadmetevaheliseks sõnumiedastuseks. See on loodud olema lihtne, avatud(s.t. igaüks saab seda kasutada), ning vähese ressursikasutusega.
 
-Rohkem infot MQTT kohta!!
-{: .todo}
-
-MQTT töötab avalda/telli (publish/subscribe) põhimõttel: **avaldaja** ehk *publisher* masin saadab info **vahendaja** ehk *broker* masinale mingi kindla teemaga. **Tellija** ehk *subscriber* masinad saavad selle teema kohta infot tellida, ning vahendaja masin edastab neile tellitud teema kohta info.
+MQTT toimib avalda/telli (publish/subscribe) põhimõttel: **avaldaja** ehk *publisher* masin saadab info **vahendaja** ehk *broker* masinale mingi kindla teemaga. **Tellija** ehk *subscriber* masinad saavad selle teema kohta infot tellida, ning vahendaja masin edastab neile tellitud teema kohta info.
 
 Päriselus võib tuua näiteks postkontori: kirjastaja saadab postkontorisse kolm erinevat ajakirja. Ajakirjade nimed on Robootika 24, Linux Uudised ning Küberturvalisuse Ekspress. Postkontori klientideks on Mati, Peeter, Juku ja Tõnu.
 
@@ -55,6 +52,5 @@ Kui Mosquitto on installitud ja tööle pandud, saame liikuda ESP32 programmeeri
 
 **Kasutatud allikad:**  
 
-- [https://www.oasis-open.org/standards/](https://www.oasis-open.org/standards/)[http://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html](http://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html) 
-- [https://scispace.com/pdf/the-use-of-mqtt-in-m2m-and-iot-systems-a-survey-1u39tkgj3g.pdf](https://scispace.com/pdf/the-use-of-mqtt-in-m2m-and-iot-systems-a-survey-1u39tkgj3g.pdf)
+- [https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.pdf](https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.pdf) 
 - [https://mqtt.org/](https://mqtt.org/)

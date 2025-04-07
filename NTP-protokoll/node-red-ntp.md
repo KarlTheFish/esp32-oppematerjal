@@ -55,5 +55,5 @@ void setup() {
 }
 ```
 
-[Järgmine õpetus](../Iseseisvaks)
+[Iseseisvaks ESP32-ga töötamiseks](../Iseseisvaks)
 

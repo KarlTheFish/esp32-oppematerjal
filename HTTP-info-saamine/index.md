@@ -16,6 +16,6 @@ Loome targa valgusfoori, mille ts√ºkli pikkust saab veebibrauseris muuta. Et ts√
 [ESP32 http info saamine](./esp32-http)
 
 **Kasutatud allikad:**
-- https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
-- https://developer.mozilla.org/en-US/docs/Web/HTTP
+- [https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview)
+- [https://developer.mozilla.org/en-US/docs/Web/HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
 
