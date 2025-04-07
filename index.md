@@ -21,6 +21,6 @@ Kursus on loodud iseseisvaks läbimiseks, aga seda võib kasutada ka õppematerj
 
 Õpetustes ning näidetes on kasutatud ESP32-S3 arenduslauda, kuid teised ESP32 arenduslauad peaksid autori teadmiste kohaselt samuti sobima.
 
-Õpetus on valminud 2025. aastal Tallinna Ülikooli informaatika õppekava bakalaureuse lõputööna.
+Õpetus on valminud 2025. aastal Tallinna Ülikooli informaatika õppekava bakalaureuse lõputöö raames.
 
 [Esimene õpetus](./ettevalmistus/ettevalmistus-1)
