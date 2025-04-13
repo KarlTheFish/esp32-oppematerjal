@@ -32,6 +32,9 @@ WebServer server(80);
 String serverName = "esp32-sensor-1";
 ```
 
+Uuri internetist, miks me just 80. porti kasutame.
+{: .challenge}
+
 Defineerime DHT sensori jaoks vajalikud muutujad - DHT sensori tüübi, pin-i, millega sensor on ühendatud, ning ujuvkomaarv tüüpi muutujad, milles hakkame talletama sensori näite.
 
 ```cpp

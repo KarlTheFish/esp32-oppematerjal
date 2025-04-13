@@ -19,7 +19,7 @@ Loome HTTP päringu sõlme. Leia vasakult menüüst sõlm nimega *http in* ja ti
 
 Lisame ka *http response* sõlme, et HTTP päringut tehes ESP32 saaks vastuse, et päring oli edukas. Paneme sõlme nimeks Parkimismaja HTTP res ning koodiks 200\.
 
-![Node-RED http response node](./pildid/.3png)
+![Node-RED http response node](./pildid/3.png)
 
 Ühendame *Parkimismaja HTTP in* sõlme enda tehtud tabeli ning *HTTP response* sõlmedega.
 

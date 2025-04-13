@@ -9,4 +9,7 @@ ESP32 abil on võimalik ka MQTT sõnumeid saata. Kuvame Node-RED dashboard-il in
 
 Vaja läheb ühte DHT11, DHT21 või DHT22 andurit ja ühte 10k oomist takistit.
 
+Uuri internetist, mis on DHT11, DHT21, ning DHT22 andurite vahe.
+{: .challenge}
+
 [MQTT teemade kohta info avaldamine esp32-ga](./esp32-mqtt)

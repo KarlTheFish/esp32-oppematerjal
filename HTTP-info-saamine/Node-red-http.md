@@ -74,8 +74,17 @@ Läheme uuesti dashboard-ile(localhost:1880/dashboard), võtame lahti Arduino ID
 
 Kui valgusfoor töötab, võib soovi korral selle kokku joota ning nt. papist valgusfoori mudelisse paigaldada.
 
-**Iseseisvaks nuputamiseks:**  
 Kuidas teha nii, et rohelise ja punase tule kestust saaks eraldi reguleerida?
+{: .challenge}
+
+Tee nii, et esp32 kontrolliks mitut valgusfoori.
+{: .challenge}
+
+Kui mitme valgusfoori kontrollimine on õnnestunud, kasuta HTTP päringuid, et luua roheline laine - teatud kiirusega sõites on kõik valgusfoorid rohelised.
+{: .challenge}
+
+Võimalusel kasuta veel mõnda esp32-te, et teha mitu erineva pikkuse ja kestusega rohelist lainet, mida Node-RED-ist kontrollida.
+{: .challenge}
 
 
 [Järgmine õpetus](../HTTP-info-saatmine)

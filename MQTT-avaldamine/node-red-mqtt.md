@@ -28,7 +28,19 @@ Paneme enda arvutis käima Mosquitto, laeme tehtud programmi ESP32-le, ning vaju
 
 **Iseseisvaks nuputamiseks:**
 
- - Proovi panna veel mõned ESP32-d temperatuuri kohta infot saatma. Mis juhtub graafikuga? Tee iga ESP32 kohta eraldi graafik.  
- - Arvuta ESP32-s viimase 50 mõõdetud temperatuuri ja õhuniiskuse keskmine ning kasuta Node-RED dashboard 2 *text* sõlme, et neid *dashboard*\-il kuvada. (Vihje \- üks esp32 võib avaldata infot mitme teema kohta\!).
+ Proovi panna veel mõned ESP32-d temperatuuri kohta infot saatma. Mis juhtub graafikuga? Tee iga ESP32 kohta eraldi graafik.  
+ {: .challenge}
+
+Kui temperatuuri infot saadavad mitu ESP32-te, lisa funktsionaalsus valida, milline neist infot saadab ja milline mitte.
+{: .challenge}
+ 
+ Arvuta ESP32-s viimase 50 mõõdetud temperatuuri ja õhuniiskuse keskmine ning kasuta Node-RED dashboard 2 *text* sõlme, et neid *dashboard*\-il kuvada. (Vihje \- üks esp32 võib avaldata infot mitme teema kohta\!).
+ {: .challenge}
+
+Kasuta mitut ESP32-te, et luua valgustuse süsteem. Iga ESP32-ga on ühendatud LED tuli ning nupp. Kui nuppu vajutatakse, lähevad põlema kõik tuled. Kui nuppu vajutatakse sellel ajal, kui tuled põlevad, lähevad kõik tuled kustu.
+{: .challenge}
+
+Täienda tulede süsteemi - lisa nuppe ja eri värvi LED tulesi, et kontrollida, mis värvi tuled parasjagu põlevad.
+{: .challenge}
 
 [Järgmine õpetus](../MQTT-turvalisus/)

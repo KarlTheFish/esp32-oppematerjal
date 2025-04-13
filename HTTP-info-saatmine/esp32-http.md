@@ -81,6 +81,9 @@ bool eriMassiivid(bool arr1[], bool arr2[], int size){
 
 ```
 
+Proovi leida infot, miks me peame c++ keeles kirjutama eraldi funktsioonid massiivide võrdlemiseks ja kopeerimiseks? Kas see on samamoodi kõikides programmeerimiskeeltes?
+{: .challenge}
+
 Loome funktsiooni, millega hakkame saatma HTTP päringut. Meie päring saab olema JSON formaadis ning näeb välja selline:  
 `[{“koht”:”1”,”vaba”:”jah”},{“koht”:”2”,”vaba”:”jah”}]`  
 Kuna me tegime Red-NODE tabelisse vaba koha välja lugema RGB värvi väärtust, saadame võtme “vaba” väärtused RGB värvikoodide kujul. Kui koht on vaba, saab väärtuseks   `#03fc03`(Roheline) ning kui ei ole, `#fc1303`(Punane).
@@ -130,6 +133,9 @@ void httpPost(){
 
 Et päringu sõnesse lisada jutumärke, kasutame \ märki enne jutumärki, mida soovime lisada.
 {: .info}
+
+Katseta, mis juhtub, kui me \ märki ei kasuta.
+{: .challenge}
 
 Kui päring on valmis, prindime serial monitori päringu sõne ja kasutame **http.POST()**, et päring saata. Kui päring on saadetud, lõpetame HTTP ühenduse. Lisame funktsioonile ka poole sekundilise delay, et vältida mitu korda sama päringu saatmist.
 ```cpp
@@ -463,9 +469,14 @@ void loop() {
 Laeme programmi ESP32-le, avame Node-RED dashboard-i ning proovime nuppe vajutada. Kui kõik on õigesti tehtud, peaksid nüüd iga nupuvajutusega tabelis olevad värvid muutuma.
 
 **Iseseisvaks nuputamiseks:**  
-- Lisa ESP32-le veel 3 nuppu, millega parkimiskoha kohta infot edastada.  
-- Lisa tabelisse veerg, kus on kirjas, mitu korda parkimiskohta on kasutatud. Edasta see info ESP32-ga.
+Lisa ESP32-le veel 3 nuppu, millega parkimiskoha kohta infot edastada. 
+{: .challenge}
 
+ Lisa tabelisse veerg, kus on kirjas, mitu korda parkimiskohta on kasutatud. Edasta see info ESP32-ga.
+ {: .challenge}
+
+Katseta tööd ka HTTP PUT päringuga.
+{: .challenge}
 
 [Järgmine õpetus](../MQTT-tellimine/)
 

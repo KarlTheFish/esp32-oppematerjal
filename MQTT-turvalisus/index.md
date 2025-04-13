@@ -7,6 +7,9 @@ has_children: true
 
 Siiamaani MQTT protokolliga asjad küll töötavad, kuid need on turvamata. Igaüks, kellel on olemas meie MQTT vahendaja IP aadress ning teemad, mille kohta infot edastatakse, saab samuti infot saata. Targas linnas oleks tegu suure turvaauguga. 
 
+Uuri internetist MQTT-ga seonduvate turvaaukude kohta.
+{: .challenge}
+
 Õnneks on MQTT protokolliga võimalik infot saata ka turvatud moel. Kasutame seda, et luua kutsungisüsteem. Loome Mosquitto vahendajaga MQTT kasutaja ning ACL(Access Control List), millega piirame teemadele ligipääsu. Teeme häirekutsungisüsteemi, mis edastab ESP32-le signaali, mille peale LED tuli hakkab vilkuma. Selline süsteem võiks olla kasulik näiteks selleks, et teavitada turvatöötajaid, et koguneda kuskile kindlasse kohta. (Tänapäeval saab muidugi selleks kasutada telefone ning muid suhtluskanaleid, aga mõnes olukorras võivad ka primitiivsed meetodid, nagu meie oma, kasulikud olla.)
 
 Muudame kõigepealt oma Mosquitto konfiguratsioonifaili. Linux operatsioonisüsteemides leiad selle `/etc/mosquitto/mosquitto.conf` , Windows operatsioonisüsteemis samas kaustas, kus on Mosquitto.exe fail, nt `C:\\Program Files\\mosquitto\\mosquitto.conf` 

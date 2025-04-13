@@ -20,6 +20,9 @@ Joonis maketeerimislaual ühendamisest näeb välja selline:
 - 220 ohm takisti \- punane LED positiivne jalg(pikem)  
 - punane LED negatiivne jalg(lühem) \- maandus  
 
+Proovi leida infot, miks me kasutame enne LED lampe takisteid?
+{: .challenge}
+
 Samad ühendused on kollase ja rohelise LED-iga, kuid kollase LED-i ees olev takisti on ühendatud 6\. ning rohelise LED-i ees olev takisti 7\. pin-iga.
 
 Avame Arduino IDE ning valime enda arenduslaua(Õige arenduslaua valimisest oli juttu 0.1. peatükis). Alguses on meil kohe ees selline kood:
@@ -295,7 +298,7 @@ HTTPClient http;
 http.begin(client, url); //alustame http päringut, kasutades WiFiClient-i ning varem defineeritud URL-i
 ```
 
-Lisaks defineerime täisarvulise muutuja, mille väärtuseks saab GET päringu vastusena saadud HTTP kood. Erinevate HTTP koodide kohta saab lugeda [siit](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+Lisaks defineerime täisarvulise muutuja, mille väärtuseks saab GET päringu vastusena saadud HTTP kood.
 ```cpp
 int responseCode = http.GET(); //defineerime muutuja HTTP päringu vastuse koodi hoidmiseks
 ```
@@ -323,6 +326,9 @@ Kui HTTP päringu vastuse kood on 200, saame muutuja “aeg” väärtuseks pann
    Serial.println(aeg);
  }
 ```
+
+Uuri internetist veel erinevate HTTP vastuste koodide kohta. Lisa ka tingimuslause veakoodide jaoks. Erinevate HTTP koodide kohta saab lugeda [siit](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+{: .challenge}
 
 httpParing funktsiooni lõpus lõpetame http ühenduse.
 ```cpp
@@ -510,6 +516,15 @@ Programmi *setup* funktsioonis panime kirja, et Serial Monitor hakkab tööle 11
 ![Arduino IDE Serial Monitor](./pildid/14.png)
 
 [Node-RED HTTP info saatmine](./Node-red-http)
+
+Lisa valgusfoorile ka jalakäijate valgusfoor.
+{: .challenge}
+
+Koosta mitmest valgusfoorist koosnev ristmik.
+{: .challenge}
+
+Lisa ka ristmikule valgusfoorid jalakäijatele.
+{: .challenge}
 
 **Kasutatud allikad:**  
 - [https://docs.arduino.cc/built-in-examples/strings/StringToInt/](https://docs.arduino.cc/built-in-examples/strings/StringToInt/)   

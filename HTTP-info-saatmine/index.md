@@ -35,6 +35,9 @@ Meie parkimismaja jälgimise süsteem hakkab töötama nii: Node-RED dashboard-i
 
 [HTTP POST päringu vastuvõtmine Node-RED-is](./node-red-http)
 
+Milliseid HTTP päringuid on veel võimalik teha? Kuidas need töötavad?
+{: .challenge}
+
 **Kasutatud allikad:**
 - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST)
 - [https://www.json.org/json-en.html](https://www.json.org/json-en.html)
