@@ -19,3 +19,6 @@ callouts:
   todo:
     title: TODO!!!
     color: yellow
+  challenge:
+    title: Ülesanne iseseisvaks nuputamiseks
+    color: green
