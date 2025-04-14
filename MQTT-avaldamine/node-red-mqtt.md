@@ -26,8 +26,6 @@ Paneme enda arvutis käima Mosquitto, laeme tehtud programmi ESP32-le, ning vaju
 ![Node-RED graafikud](./pildid/7.png)
 
 
-**Iseseisvaks nuputamiseks:**
-
  Proovi panna veel mõned ESP32-d temperatuuri kohta infot saatma. Mis juhtub graafikuga? Tee iga ESP32 kohta eraldi graafik.  
  {: .challenge}
 

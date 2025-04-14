@@ -41,7 +41,6 @@ Vajutame paremal üleval ääres olevat nuppu *Add*. Oleme tagasi MQTT sõlme s�
 
 Vajuta Node-RED-is *Deploy* nuppu, mine Node-RED dashboardile, ja pane ESP32 tööle. Proovi Node-RED dashboardil lülitit sisse ja välja lülitada. Kui kõik on õigesti tehtud, lülitub ESP32-ga ühendatud LED vastavalt sellele, mis olekus on dashboardil olev lüliti, sisse ning välja.
 
-**Ülesandeid iseseisvaks nuputamiseks:**  
 Proovi MQTT sõnumeid saada mitme ESP32-ga korraga.  
 {: .challenge}
 
@@ -49,6 +48,9 @@ Proovi MQTT sõnumeid saada mitme ESP32-ga korraga.
 {: .challenge}
 
 Konstrueeri esimese õpetuse näitel ka valgusfoor. Pane see samuti MQTT-ga töötama.
+{: .challenge}
+
+**Edasijõudnumatele:** Proovi käima panna ESP32 MQTT vahendajana. Selle jaoks leiad dokumentatsioni ja õpetuse [siit](https://github.com/alexCajas/EmbeddedMqttBroker)
 {: .challenge}
 
 

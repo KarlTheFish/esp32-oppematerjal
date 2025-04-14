@@ -53,7 +53,9 @@ Kui me nüüd Node-RED üleval paremas nurgas *Deploy* nuppu vajutame ja läheme
 
 ![Node-RED näidud](./pildid/14.png)
 
-**Iseseisvaks nuputamiseks:**  
-- Lisa Node-RED-i näidik, kus on näha ESP32 serverite arvu, mille andmetest keskmine arvutatakse.
+Lisa Node-RED-i näidik, kus on näha ESP32 serverite arvu, mille andmetest keskmine arvutatakse.
+{: .challenge}
+
+Pane HTTP server infot koguma, kasutades MQTT-d. 
 
 [Järgmine õpetus](../WebSocket-1/)

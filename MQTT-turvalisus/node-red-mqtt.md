@@ -42,8 +42,8 @@ Kui *MQTT kutsung out* sõlm on tehtud, ühendame sellega järgmised sõlmed:
 
 Vajutame *Deploy* ning läheme *localhost:1880/dashboard* . Kui kõik on õigesti tehtud, näeme kahte nuppu: *Häire* ning *Häire läbi*. Proovime neid kordamööda vajutada või peale häire nupu vajutamist oodata. Kui kõik on õigesti tehtud, peaks *häire* nupu vajutamisel LED tuli hakkama vilkuma ja *häire läbi* nupu vajutamisel või peale 5 minutit tuli kustuma.
 
-**Iseseisvaks nuputamiseks:**  
 Proovi ka varem tehtud MQTT asjad teha turvaliseks.
+{: .challenge}
 
 [Järgmine õpetus](../HTTP-server/)
 

@@ -91,8 +91,15 @@ Kui me nüüd vajutame üleval paremal nurgas *Deploy*, paneme ESP32 programmi t
 
 ![Kiiruspiirangu tabel](./pildid/15.png)
 
-**Iseseisvaks nuputamiseks:**  
-- Proovi panna ESP32 saatma viimase 10 mõõtmise keskmist, ning Node-RED seda näitama tekstiväljal.
+
+Proovi panna ESP32 saatma viimase 10 mõõtmise keskmist, ning Node-RED seda näitama tekstiväljal.
+{: .challenge}
+
+Lisa kiiruskaamerale ka ekraan, mis näitab parajasti kehtivat kiiruspiirangut.
+{: .challenge}
+
+Pane ekraan edastama ka sõnumit, kas kiirus on alla või üle piirangu.
+{: .challenge}
 
 [Järgmine õpetus](../NTP-protokoll/)
 

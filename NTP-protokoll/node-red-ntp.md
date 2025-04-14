@@ -21,9 +21,9 @@ Kui me nüüd *Deploy* vajutame ning mõneks ajaks ESP32 tööle jätame, näeme
 
 ![Node-RED graafik](./pildid/6.png)
 
-**Iseseisvaks nuputamiseks:**  
-Näita kellaaega ka ekraanil. Nii ekraan kui ka RTC sensor kasutavad Wire teeki. Näidiskood ekraani ja RTC ühendamiseks kahe Wire abil näeb välja selline:
 
+Näita kellaaega ka ekraanil. Nii ekraan kui ka RTC sensor kasutavad Wire teeki. Näidiskood ekraani ja RTC ühendamiseks kahe Wire abil näeb välja selline:
+{: .challenge}
 ```cpp
 const int rtcSCL = 4;
 const int rtcSDA = 5;
@@ -54,6 +54,7 @@ void setup() {
    display.display();
 }
 ```
+
 
 [Iseseisvaks ESP32-ga töötamiseks](../Iseseisvaks)
 

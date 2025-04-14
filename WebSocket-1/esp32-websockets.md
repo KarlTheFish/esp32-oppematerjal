@@ -302,8 +302,14 @@ Laeme tehtud programmi ESP32-le ja proovime Node-Red dashboardilt sõnumeid saat
 Kui Node-RED uuesti deploy-da samal ajal, kui ESP32 on ühendatud, WebSocket ühendus katkeb. Uuesti ühendamiseks vajuta ESP32 arenduslaual reset nuppu.
 {: .important}
 
-**Iseseisvaks nuputamiseks:**
-- funktsiooni display.invertDisplay(true) abil saab panna ekraan kuvama tumedat teksti heledal taustal. Lisa Node-RED dashboard-i funktsionaalsus muuta, kas tekst on kuvatud tumedana heledal taustal või heledana tumedal taustal.
+Funktsiooni display.invertDisplay(true) abil saab panna ekraan kuvama tumedat teksti heledal taustal. Lisa Node-RED dashboard-i funktsionaalsus muuta, kas tekst on kuvatud tumedana heledal taustal või heledana tumedal taustal.
+{: .challenge}
+
+Lisa Node-RED-is veel vorme, millega sõnumeid kuvada. ESP32-le lisa nupp, millega vahetada, millist sõnumit parajasti näidatakse.
+{: .challenge}
+
+Tee nii, et ekraanil oleks näha infot mõnest varasemalt tehtud õpetusest, nt. DHT andurist võetud temperatuuri ja õhuniiskust.
+{: .challenge}
 
 [Järgmine õpetus](../WebSocket-2/)
 
