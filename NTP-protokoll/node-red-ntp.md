@@ -55,6 +55,8 @@ void setup() {
 }
 ```
 
+Kasuta NTP-d, et varasemates õpetustes panna esp32 nt. õhutemperatuuri ja õhuniiskust saatma kindla ajaintervalli tagant.
+{: .challenge}
 
 [Iseseisvaks ESP32-ga töötamiseks](../Iseseisvaks)
 
