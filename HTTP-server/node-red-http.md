@@ -57,5 +57,6 @@ Lisa Node-RED-i näidik, kus on näha ESP32 serverite arvu, mille andmetest kesk
 {: .challenge}
 
 Pane HTTP server infot koguma, kasutades MQTT-d. 
+{: .challenge}
 
 [Järgmine õpetus](../WebSocket-1/)

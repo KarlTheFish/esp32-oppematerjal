@@ -1,5 +1,5 @@
 ---
-title: Ideid ESP32 projektide jaoks
+title: 11. Ideid ESP32 projektide jaoks
 layout: default
 nav_order: 33
 has_children: true
@@ -17,6 +17,12 @@ FastLed teegiga on võimaled LED ribasi kergelt kontrollida. FastLed teegi leiad
 ### Digitaalne uksekell
 
 Ehita ESP32 abil uksekell, mis lisaks helile saadab teavituse ka arvutisse ja/või telefoni(nt. Telegrami teel). Õpetuse ESP32 abil heli mängimiseks leiad [siit](https://esp32io.com/tutorials/esp32-audio) ja Telegram sõnumi saatmiseks [siit](https://randomnerdtutorials.com/telegram-control-esp32-esp8266-nodemcu-outputs/). Arvutis oleva teate jaoks võiks Node-RED täiesti sobida.
+
+### Üks HTTP päring kõige jaoks
+
+Õpetustes oleme iga HTTP päringu jaoks kasutanud Node-RED-is eraldi URL-i. Praktilisem oleks aga hoopis kasutada ühte HTTP URL-i ning seda, mis infot ESP32 proovib saada või saata, täpsustada URL parameetreid kasutades. Node-RED HTTP URL parameetrite kasutamise kohta saad lugeda [siit.](https://cookbook.nodered.org/http/handle-url-parameters)
+
+
 
 
 
