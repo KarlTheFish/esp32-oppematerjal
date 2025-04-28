@@ -18,8 +18,8 @@ Lisame read:
 
 Linux kasutajad:
 
-`acl\_file /etc/mosquitto/acl-kutsung`  
-`password\_file /etc/mosquitto/passwd`
+`acl_file /etc/mosquitto/acl-kutsung`  
+`password_file /etc/mosquitto/passwd`
 
 Windows kasutajad:
 

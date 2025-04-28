@@ -50,7 +50,7 @@ Proovi MQTT sõnumeid saada mitme ESP32-ga korraga.
 Konstrueeri esimese õpetuse näitel ka valgusfoor. Pane see samuti MQTT-ga töötama.
 {: .challenge}
 
-**Edasijõudnumatele:** Proovi käima panna ESP32 MQTT vahendajana. Selle jaoks leiad dokumentatsioni ja õpetuse [siit](https://github.com/alexCajas/EmbeddedMqttBroker)
+**Edasijõudnumatele:** Proovi käima panna ESP32 MQTT vahendajana. Selle jaoks leiad dokumentatsiooni ja õpetuse [siit](https://github.com/alexCajas/EmbeddedMqttBroker)
 {: .challenge}
 
 

@@ -468,7 +468,6 @@ void loop() {
 
 Laeme programmi ESP32-le, avame Node-RED dashboard-i ning proovime nuppe vajutada. Kui kõik on õigesti tehtud, peaksid nüüd iga nupuvajutusega tabelis olevad värvid muutuma.
 
-**Iseseisvaks nuputamiseks:**  
 Lisa ESP32-le veel 3 nuppu, millega parkimiskoha kohta infot edastada. 
 {: .challenge}
 

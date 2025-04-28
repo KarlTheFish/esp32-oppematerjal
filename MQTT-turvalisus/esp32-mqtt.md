@@ -134,13 +134,13 @@ Terve kood näeb välja selline:
 
 
 //Wifi nimi ning parool. NB! Mõlemad on tõstutundlikud!
-const char* ssid = "Aeglane";
-const char* password = "anuausmees";
+const char* ssid = "wifi-nimi";
+const char* password = "wifi-parool";
 
 
 //Arvuti, kus Mosquitto jookseb, IP.
 //Enda arvuti IP aadressi saad teada Linux-is hostname -I ning Windows-is ipconfig käsuga käsureal.
-const char* MQTT_broker = "192.168.1.30";
+const char* MQTT_broker = "1.2.3.4";
 //Deklareerime muutuja MQTT teema jaoks.
 const char* MQTT_topic = "kutsung";
 //Nimi, millega ESP32 MQTT ühendust loob. NB! Ühel MQTT vahendajal ei saa olla mitu sama nimega ühendust!

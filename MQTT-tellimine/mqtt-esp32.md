@@ -79,7 +79,7 @@ MQTTclient.setServer(MQTT_broker, 1883);
 MQTTclient.setCallback(callback);
 ```
 
-MTQQclient on meie varasemalt defineeritud PubSubClient. Esimene rida paneb PubSubClient vahendusserveriks meie defineeritud serveri pordil 1883\. Teine rida annab PubSubClient-ile funktsiooni nimega callback, mis käivitub, kui PubSubClient saab mingit infot. *Callback* funktsioon ei ole aga meil veel defineeritud.
+MQTTclient on meie varasemalt defineeritud PubSubClient. Esimene rida paneb PubSubClient vahendusserveriks meie defineeritud serveri pordil 1883\. Teine rida annab PubSubClient-ile funktsiooni nimega *callback*, mis käivitub, kui PubSubClient saab mingit infot. *Callback* funktsioon ei ole aga meil veel defineeritud.
 
 Praeguseks peaks *setup* funktsioon meil välja nägema selline:
 ```cpp
@@ -106,7 +106,7 @@ Liigume **loop** funktsiooni. Lisame sinna kõigepealt järgmise rea:
 MQTTclient.loop();
 ```
 
-PubSubClient teegiga töötades on vajalik pidevalt välja kutsuda PubSubClient klassi loop() funktsioon. Selle funktsiooni abil saadab PubSubClient MQTT vahendajale sõnumi, et ta töötab endiselt, ning kontrollib, kas vahendaja on talle saatnud uusi sõnumeid.
+PubSubClient teegiga töötades on vajalik pidevalt välja kutsuda PubSubClient klassi *loop()* funktsioon. Selle funktsiooni abil saadab PubSubClient MQTT vahendajale sõnumi, et ta töötab endiselt, ning kontrollib, kas vahendaja on talle saatnud uusi sõnumeid.
 
 Lisame *while*-tsükli, mis käivitub, kui MQTT ühendust ei ole. Kui MQTT ühendus puudub, proovitakse see luua. Kui ühenduse loomine õnnestub, tellitakse infot meie varasemalt defineeritud teema kohta, ning kui ei õnnestu, prinditakse serial monitori veakood.
 ```cpp
@@ -123,7 +123,7 @@ while(!MQTTclient.connected()){
 }
 ```
 
-Lõpuks näeb meie loop funktsioon välja selline:
+Lõpuks näeb meie *loop* funktsioon välja selline:
 ```cpp
 void loop() {
  //Kui MQTT ühendust ei ole, loome selle
@@ -159,7 +159,7 @@ void valgusSisseValja(String sonum){
 }
 ```
 
-Liigume edasi callback funktsiooni juurde. Callback funktsioonis prindime kõigepealt serial monitori informatsiooni, et oleme kätte saanud sõnumi, ning teema, mis sõnumil on. Defineerime ka sõne, kus hakkame sõnumit hoidma.
+Liigume edasi *callback* funktsiooni juurde. *Callback* funktsioonis prindime kõigepealt serial monitori informatsiooni, et oleme kätte saanud sõnumi, ning teema, mis sõnumil on. Defineerime ka sõne, kus hakkame sõnumit hoidma.
 ```cpp
 void callback(String topic, byte* message, unsigned int length){
  Serial.print("Message received on topic: ");

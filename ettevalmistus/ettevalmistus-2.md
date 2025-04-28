@@ -9,14 +9,12 @@ ESP32 on nüüd arenduseks valmis. Kuna aga tegu on asjade interneti kursusega, 
 
 Selleks kasutame vabavaralist platvormi **Node-RED**. Node-RED on andmevoolu põhine *low-code* tööriist, mida me hakkame kasutama enda arvutis HTTP ning MQTT protokollidega töötamiseks.
 
-(Node-RED allikas: [https://nodered.org/about/](https://nodered.org/about/) )
-
 Kasutame Node-RED installimiseks Dockerit. Kui sul Dockerit arvutisse installitud ei ole, leiad õpetuse [siit.](https://docs.docker.com/desktop/)
 
 Node-RED installimine ning käivitamine on lihtne. Kui Docker on installitud, jooksuta Docker käsureal:  
-`docker run \-it \-p 1880:1880 \-v node\_red\_data:/data \--name TarkLinn nodered/node-red`
+`docker run -it -p 1880:1880 -v node_red_data:data --name TarkLinn nodered/node-red`
 
-(Linux kasutajatele: jooksuta terminalis sama käsku sudo õigustega)
+(Linux kasutajatele: jooksuta terminalis sama käsku sudo õigustega või lisa enda kasutaja Docker kasutajagruppi kasutades käsku `sudo usermod -aG docker ${USER}`)
 
 Esimesel käivitamisel läheb natuke aega. Kui Node-RED on käima hakanud, saad sinna ligi minnes veebibrauseris aadressile *localhost:1880*
 

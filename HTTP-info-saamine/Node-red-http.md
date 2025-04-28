@@ -54,7 +54,7 @@ Kasutame jälle *change* sõlme, et päringus saadava *payload*\-i väärtus muu
 Node-RED keskkonnas *flow* algusega muutujad kehtivad ühe *flow* ehk voolu sees (Voolud on eraldatud Node-RED siseste vahelehtedega). *msg* algusega muutujad kehtivad ainult omavahel ühendatud sõlmedes. See tähendab, et meil võib olla ühel Node-RED lehel näiteks mitu *msg.payload* muutujat, mis on üksteisest täiesti sõltumatud senikaua, kuni nendega tegelevad sõlmed ei ole ühendatud.
 {: .info}
 
-Järgmisena leiame vasakult menüüst *template* sõlme ja tirime selle samuti keskele. *Template* sõlme abil saame seadistada HTTP päringute(ja ka muude päringute) vastuseid. Paneme sõlme nimeks “valgusfoor HTTP template”, *Property* väärtuseks jätame *msg.payload* ning *Template* väärtuseks paneme lihtsalt “{{payload}}”.
+Järgmisena leiame vasakult menüüst *template* sõlme ja tirime selle samuti keskele. *Template* sõlme abil saame seadistada HTTP päringute(ja ka muude päringute) vastuseid. Paneme sõlme nimeks “valgusfoor HTTP template”, *Property* väärtuseks jätame *msg.payload* ning *Template* väärtuseks paneme lihtsalt “\{\{payload\}\}”.
 
 ![Template sõlme konfiguratsioon](./pildid/9.png)
 

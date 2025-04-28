@@ -35,7 +35,7 @@ otsime “esp32” ning installime “esp32 by Esspressif Systems” arenduslaua
 
 Kuvatõmmisel olev valik töötab ESP32-S3 arenduslauaga. Kui sa ei ole kindel, mis arenduslaud sul on ning mida sa peaksid Arduino IDE menüüs valima, leiad arenduslaua mudeli kohta informatsiooni arenduslaua pealt ning internetist.
 
-![ESP32 arenduslauad](./7.jpg)
+![ESP32 arenduslauad](./pildid/7.jpg)
 *Erinevate arenduslaudade mudelid. Parempoolset arenduslauda on kasutatud õpetuste kirjutamisel ning testimisel.*
 
 Kui õige arenduslaud on valitud, olemegi valmis ESP32-te Arduino IDE abil programmeerima!

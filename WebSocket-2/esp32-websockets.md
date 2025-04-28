@@ -120,20 +120,6 @@ Kuna me mõõtsime aega, et ultrahelilaine jõuaks objektini ning tagasi, jagame
 return (duration * .0343)/2;
 ```
 
-Valmis funktsioon kauguse mõõtmiseks näeb välja selline:
-
-```cpp
-float kaugus(){
- digitalWrite(trigPin, LOW); 
- delayMicroseconds(2); 
- digitalWrite(trigPin, HIGH); 
- delayMicroseconds(10); 
- digitalWrite(trigPin, LOW); 
- duration = pulseIn(echoPin, HIGH);
- return (duration * .0343)/2;
-}
-```
-
 Loome järgmisena funktsiooni kiiruse mõõtmiseks. Mõõdame kaugust kaks korda, ühe sekundilise vahega.
 
 ```cpp

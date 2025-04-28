@@ -1,5 +1,5 @@
 ---
-title: Node-RED ja esp32 HTTP serveri suhtlus
+title: Node-RED ja esp32 suhtlus
 layout: default
 nav_order: 22
 parent: 6. HTTP server esp32 peal. Infovahetus mitme ESP32 vahel. Keskmine õhuniiskus ja temperatuur.
@@ -56,7 +56,7 @@ Kui me nüüd Node-RED üleval paremas nurgas *Deploy* nuppu vajutame ja läheme
 Lisa Node-RED-i näidik, kus on näha ESP32 serverite arvu, mille andmetest keskmine arvutatakse.
 {: .challenge}
 
-Pane HTTP server infot koguma, kasutades MQTT-d. 
+Pane ESP32 klient infot koguma, kasutades MQTT-d. 
 {: .challenge}
 
 [Järgmine õpetus](../WebSocket-1/)

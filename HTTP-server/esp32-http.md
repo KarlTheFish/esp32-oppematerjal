@@ -653,7 +653,7 @@ void loop() {
 
 Laeme programmi kolmandale ESP32-le ja liigume Node-Red juurde.
 
-[ESP32 HTTP serveriga suhtlemine Node-RED-is](./node-red-http)
+[ESP32-ga suhtlemine Node-RED-is](./node-red-http)
 
 **Kasutatud allikad:**
 - [https://lastminuteengineers.com/esp32-mdns-tutorial/](https://lastminuteengineers.com/esp32-mdns-tutorial/)   

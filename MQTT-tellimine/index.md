@@ -13,7 +13,7 @@ Päriselus võib tuua näiteks postkontori: kirjastaja saadab postkontorisse kol
 
 Kergemaks visualiseerimiseks on meil tabel sellest, milliseid ajakirju igaüks tellib
 
-| Inimene | Ajalehed |
+| Inimene | Ajakirjad |
 | :---- | :---- |
 | Mati | Robootika 24, Linux Uudised |
 | Peeter | Küberturvalisuse Ekspress |
