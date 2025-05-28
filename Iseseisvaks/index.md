@@ -18,5 +18,3 @@ Oleme jõudnud kursuse lõppu. Tegelikult oleme aga tutvunud vaid mõnede popula
 [https://projecthub.arduino.cc/](https://projecthub.arduino.cc/) - Mitmed Arduino projektid koos õpetustega
 
 Arduino, ESP32, ning installitud väliste teekide kasutuse kohta võid leida ka infot minnes Arduino IDE-s *File->Examples*. Seal avanevas menüüs leiad näited, kuidas teekidega töötada. Tavaliselt võid leida dokumentatsiooni ka teekide GitHub repodest, kui need avalikud on.
-
-[Tagasiside](./tagasiside)
